@@ -10,6 +10,11 @@ import time
 from functools import wraps
 from typing import NamedTuple
 
+# added
+import aiohttp
+import json
+# 
+
 import openai
 import litellm
 
@@ -160,27 +165,48 @@ class OpenAIGPTAPI(BaseGPTAPI, RateLimiter):
             litellm.api_version = config.openai_api_version
         self.rpm = int(config.get("RPM", 10))
 
+    # async def _achat_completion_stream(self, messages: list[dict]) -> str:
+    #     response = await litellm.acompletion(
+    #         **self._cons_kwargs(messages),
+    #         stream=True
+    #     )
+
+    #     # create variables to collect the stream of chunks
+    #     collected_chunks = []
+    #     collected_messages = []
+    #     # iterate through the stream of events
+    #     async for chunk in response:
+    #         collected_chunks.append(chunk)  # save the event response
+    #         chunk_message = chunk['choices'][0]['delta']  # extract the message
+    #         collected_messages.append(chunk_message)  # save the message
+    #         if "content" in chunk_message:
+    #             print(chunk_message["content"], end="")
+
+    #     full_reply_content = ''.join([m.get('content', '') for m in collected_messages])
+    #     usage = self._calc_usage(messages, full_reply_content)
+    #     self._update_costs(usage)
+    #     return full_reply_content
+
+
+
+    async def generate_completion(url, payload):
+        async with aiohttp.ClientSession() as session:
+            async with session.post(url, headers={'Content-Type': 'application/json'}, data=json.dumps(payload)) as response:
+                response_data = await response.json()
+                return response_data
+
     async def _achat_completion_stream(self, messages: list[dict]) -> str:
-        response = await litellm.acompletion(
-            **self._cons_kwargs(messages),
-            stream=True
-        )
 
-        # create variables to collect the stream of chunks
-        collected_chunks = []
-        collected_messages = []
-        # iterate through the stream of events
-        async for chunk in response:
-            collected_chunks.append(chunk)  # save the event response
-            chunk_message = chunk['choices'][0]['delta']  # extract the message
-            collected_messages.append(chunk_message)  # save the message
-            if "content" in chunk_message:
-                print(chunk_message["content"], end="")
+        url = "http://localhost:11434/api/generate"
+        payload = {
+            "model": "phi3",
+            "prompt": "Why is the sky blue?",
+            "stream": False
+        }
 
-        full_reply_content = ''.join([m.get('content', '') for m in collected_messages])
-        usage = self._calc_usage(messages, full_reply_content)
-        self._update_costs(usage)
-        return full_reply_content
+        response = await generate_completion(url, payload)
+
+        return response
 
     def _cons_kwargs(self, messages: list[dict]) -> dict:
         if CONFIG.openai_api_type == 'azure':
