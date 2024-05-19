@@ -196,7 +196,7 @@ class OpenAIGPTAPI(BaseGPTAPI, RateLimiter):
                 return response_data
 
     async def _achat_completion_stream(self, messages: list[dict]) -> str:
-
+        print("dddddddddddddddddddddddddddddddddddddddddddddddd")
         print(messages)
         url = "http://localhost:11434/api/generate"
         payload = {
