@@ -206,7 +206,7 @@ class OpenAIGPTAPI(BaseGPTAPI, RateLimiter):
             "stream": False
         }
 
-        response = await self.generate_completion(api, payload["prompt"], **payload)
+        response = await self.generate_completion(api, user_content[0], **payload)
 
         return response
 
