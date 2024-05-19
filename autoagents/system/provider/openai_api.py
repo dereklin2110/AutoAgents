@@ -199,7 +199,7 @@ class OpenAIGPTAPI(BaseGPTAPI, RateLimiter):
         print(messages)
         user_content = [item['content'] for item in messages if item['role'] == 'user']
 
-        url = "http://localhost:11434/api/generate"
+        url = "http://127.0.0.1:11434/api/generate"
         api = OpenAIGPTAPI(url)
         payload = {
             "model": "phi3",
