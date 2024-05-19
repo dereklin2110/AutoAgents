@@ -196,11 +196,13 @@ class OpenAIGPTAPI(BaseGPTAPI, RateLimiter):
     async def _achat_completion_stream(self, messages: list[dict]) -> str:
         print("dddddddddddddddddddddddddddddddddddddddddddddddd")
         print(messages)
+        user_content = [item['content'] for item in messages if item['role'] == 'user']
+
         url = "http://localhost:11434/api/generate"
         api = OpenAIGPTAPI(url)
         payload = {
             "model": "phi3",
-            "prompt": "Why is the sky blue?",
+            "prompt": user_content[0],
             "stream": False
         }
 
