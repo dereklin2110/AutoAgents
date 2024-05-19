@@ -11,6 +11,7 @@ from functools import wraps
 from typing import NamedTuple
 
 # added
+import requests
 import aiohttp
 import json
 # 
@@ -194,7 +195,7 @@ class OpenAIGPTAPI(BaseGPTAPI, RateLimiter):
         return response_data
 
     async def _achat_completion_stream(self, messages: list[dict]) -> str:
-        print("dddddddddddddddddddddddddddddddddddddddddddddddd")
+        print("aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa")
         print(messages)
         user_content = [item['content'] for item in messages if item['role'] == 'user']
 
@@ -206,7 +207,11 @@ class OpenAIGPTAPI(BaseGPTAPI, RateLimiter):
             "stream": False
         }
 
-        response = await self.generate_completion(api, user_content[0], **payload)
+        headers = {
+            'Content-Type': 'application/json'
+        }
+
+        response = await requests.request("POST", url, headers=headers, data=json.dumps(payload))
 
         return response
 
