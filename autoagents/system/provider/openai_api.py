@@ -189,23 +189,22 @@ class OpenAIGPTAPI(BaseGPTAPI, RateLimiter):
 
 
 
-    async def generate_completion(url, payload):
-        async with aiohttp.ClientSession() as session:
-            async with session.post(url, headers={'Content-Type': 'application/json'}, data=json.dumps(payload)) as response:
-                response_data = await response.json()
-                return response_data
+    async def generate_completion(api, prompt, **kwargs):
+        response_data = await api.generate_completion(prompt, **kwargs)
+        return response_data
 
     async def _achat_completion_stream(self, messages: list[dict]) -> str:
         print("dddddddddddddddddddddddddddddddddddddddddddddddd")
         print(messages)
         url = "http://localhost:11434/api/generate"
+        api = OpenAIGPTAPI(url)
         payload = {
             "model": "phi3",
             "prompt": "Why is the sky blue?",
             "stream": False
         }
 
-        response = await self.generate_completion(url, payload)
+        response = await self.generate_completion(api, payload["prompt"], **payload)
 
         return response
 
