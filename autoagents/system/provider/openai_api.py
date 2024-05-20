@@ -190,28 +190,47 @@ class OpenAIGPTAPI(BaseGPTAPI, RateLimiter):
 
 
 
-    async def generate_completion(api, prompt, **kwargs):
-        response_data = await api.generate_completion(prompt, **kwargs)
-        return response_data
+    async def chat_with_ollama(model, messages):
+        url = "http://localhost:11434/api/chat"
+        headers = {
+            'Content-Type': 'application/json'
+        }
+        payload = {
+            'model': model,
+            'messages': messages
+        }
+
+        async with aiohttp.ClientSession() as session:
+            async with session.post(url, json=payload, headers=headers) as response:
+                return await response.json()
 
     async def _achat_completion_stream(self, messages: list[dict]) -> str:
         print("aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa")
         # print(messages)
-        user_content = [item['content'] for item in messages if item['role'] == 'user']
 
-        url = "http://localhost:11434/api/generate"
-        api = OpenAIGPTAPI(url)
-        payload = {
-            "model": "phi3",
-            "prompt": user_content[0],
-            "stream": False
-        }
+        # user_content = [item['content'] for item in messages if item['role'] == 'user']
 
-        headers = {
-            'Content-Type': 'application/json'
-        }
+        # url = "http://localhost:11434/api/generate"
+        # api = OpenAIGPTAPI(url)
+        # payload = {
+        #     "model": "phi3",
+        #     "prompt": user_content[0],
+        #     "stream": False
+        # }
 
-        response = await requests.request("POST", url, headers=headers, data=json.dumps(payload))
+        # headers = {
+        #     'Content-Type': 'application/json'
+        # }
+
+
+        model = "phi3"
+        messages = [
+            {"role": "user", "content": "why is the sky blue?"}
+        ]
+        response = await chat_with_ollama(model, messages)
+
+
+        # response = await requests.request("POST", url, headers=headers, data=json.dumps(payload))
         print(response)
         return response
 
