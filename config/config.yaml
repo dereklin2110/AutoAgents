@@ -31,3 +31,8 @@ RPM: 10
 # GOOGLE_CSE_ID: "YOUR_CSE_ID"
 ## Visit https://serper.dev/ to get key.
 # SERPER_API_KEY: "YOUR_API_KEY"
+
+services:
+  web:
+    extra_hosts:
+      - "host.docker.internal:host-gateway"
