@@ -1,0 +1,755 @@
+May 18 17:01:52 dereklin-AB350M-Gaming-3 systemd[1]: Started ollama.service - Ollama Service.
+May 18 17:01:52 dereklin-AB350M-Gaming-3 ollama[10717]: Couldn't find '/usr/share/ollama/.ollama/id_ed25519'. Generating new private key.
+May 18 17:01:52 dereklin-AB350M-Gaming-3 ollama[10717]: Your new public key is:
+May 18 17:01:52 dereklin-AB350M-Gaming-3 ollama[10717]: ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAIOucobwVPWB7zhwyDTNTcNx6sPQcFC4pCG0XXLNp7PLH
+May 18 17:01:52 dereklin-AB350M-Gaming-3 ollama[10717]: 2024/05/18 17:01:52 routes.go:1008: INFO server config env="map[OLLAMA_DEBUG:false OLLAMA_LLM_LIBRARY: OLLAMA_MAX_LOADED_MODELS:1 OLLAMA_MAX_QUEUE:512 OLLAMA_MAX_VRAM:0 OLLAMA_NOPRUNE:false OLLAMA_NUM_PARALLEL:1 OLLAMA_ORIGINS:[http://localhost https://localhost http://localhost:* https://localhost:* http://127.0.0.1 https://127.0.0.1 http://127.0.0.1:* https://127.0.0.1:* http://0.0.0.0 https://0.0.0.0 http://0.0.0.0:* https://0.0.0.0:*] OLLAMA_RUNNERS_DIR: OLLAMA_TMPDIR:]"
+May 18 17:01:52 dereklin-AB350M-Gaming-3 ollama[10717]: time=2024-05-18T17:01:52.740+08:00 level=INFO source=images.go:704 msg="total blobs: 0"
+May 18 17:01:52 dereklin-AB350M-Gaming-3 ollama[10717]: time=2024-05-18T17:01:52.740+08:00 level=INFO source=images.go:711 msg="total unused blobs removed: 0"
+May 18 17:01:52 dereklin-AB350M-Gaming-3 ollama[10717]: time=2024-05-18T17:01:52.741+08:00 level=INFO source=routes.go:1054 msg="Listening on 127.0.0.1:11434 (version 0.1.38)"
+May 18 17:01:52 dereklin-AB350M-Gaming-3 ollama[10717]: time=2024-05-18T17:01:52.741+08:00 level=INFO source=payload.go:30 msg="extracting embedded files" dir=/tmp/ollama2108205731/runners
+May 18 17:01:56 dereklin-AB350M-Gaming-3 ollama[10717]: time=2024-05-18T17:01:56.114+08:00 level=INFO source=payload.go:44 msg="Dynamic LLM libraries [rocm_v60002 cpu cpu_avx cpu_avx2 cuda_v11]"
+May 18 17:01:56 dereklin-AB350M-Gaming-3 ollama[10717]: time=2024-05-18T17:01:56.349+08:00 level=INFO source=types.go:71 msg="inference compute" id=GPU-11fb2d47-c004-0f02-d2d3-563aae62a84e library=cuda compute=8.9 driver=12.4 name="NVIDIA GeForce RTX 4070 Ti SUPER" total="15.7 GiB" available="14.6 GiB"
+May 18 17:03:44 dereklin-AB350M-Gaming-3 ollama[10717]: [GIN] 2024/05/18 - 17:03:44 | 200 |       42.12µs |       127.0.0.1 | HEAD     "/"
+May 18 17:03:44 dereklin-AB350M-Gaming-3 ollama[10717]: [GIN] 2024/05/18 - 17:03:44 | 200 |     889.911µs |       127.0.0.1 | GET      "/api/tags"
+May 18 17:06:50 dereklin-AB350M-Gaming-3 ollama[10717]: [GIN] 2024/05/18 - 17:06:50 | 200 |      22.463µs |       127.0.0.1 | HEAD     "/"
+May 18 17:06:50 dereklin-AB350M-Gaming-3 ollama[10717]: [GIN] 2024/05/18 - 17:06:50 | 404 |     353.772µs |       127.0.0.1 | POST     "/api/show"
+May 18 17:06:52 dereklin-AB350M-Gaming-3 ollama[10717]: time=2024-05-18T17:06:52.634+08:00 level=INFO source=download.go:136 msg="downloading 4fed7364ee3e in 24 100 MB part(s)"
+May 18 17:07:35 dereklin-AB350M-Gaming-3 ollama[10717]: time=2024-05-18T17:07:35.749+08:00 level=INFO source=download.go:136 msg="downloading c608dc615584 in 1 149 B part(s)"
+May 18 17:07:38 dereklin-AB350M-Gaming-3 ollama[10717]: time=2024-05-18T17:07:38.930+08:00 level=INFO source=download.go:136 msg="downloading fa8235e5b48f in 1 1.1 KB part(s)"
+May 18 17:07:42 dereklin-AB350M-Gaming-3 ollama[10717]: time=2024-05-18T17:07:42.015+08:00 level=INFO source=download.go:136 msg="downloading d47ab88b61ba in 1 140 B part(s)"
+May 18 17:07:45 dereklin-AB350M-Gaming-3 ollama[10717]: time=2024-05-18T17:07:45.146+08:00 level=INFO source=download.go:136 msg="downloading f7eda1da5a81 in 1 485 B part(s)"
+May 18 17:07:48 dereklin-AB350M-Gaming-3 ollama[10717]: [GIN] 2024/05/18 - 17:07:48 | 200 | 58.495336843s |       127.0.0.1 | POST     "/api/pull"
+May 18 17:07:48 dereklin-AB350M-Gaming-3 ollama[10717]: [GIN] 2024/05/18 - 17:07:48 | 200 |     1.71679ms |       127.0.0.1 | POST     "/api/show"
+May 18 17:07:48 dereklin-AB350M-Gaming-3 ollama[10717]: [GIN] 2024/05/18 - 17:07:48 | 200 |     590.982µs |       127.0.0.1 | POST     "/api/show"
+May 18 17:07:49 dereklin-AB350M-Gaming-3 ollama[10717]: time=2024-05-18T17:07:49.313+08:00 level=INFO source=memory.go:133 msg="offload to gpu" layers.requested=-1 layers.real=33 memory.available="14.6 GiB" memory.required.full="3.5 GiB" memory.required.partial="3.5 GiB" memory.required.kv="768.0 MiB" memory.weights.total="2.1 GiB" memory.weights.repeating="2.0 GiB" memory.weights.nonrepeating="77.1 MiB" memory.graph.full="156.0 MiB" memory.graph.partial="175.1 MiB"
+May 18 17:07:49 dereklin-AB350M-Gaming-3 ollama[10717]: time=2024-05-18T17:07:49.313+08:00 level=INFO source=memory.go:133 msg="offload to gpu" layers.requested=-1 layers.real=33 memory.available="14.6 GiB" memory.required.full="3.5 GiB" memory.required.partial="3.5 GiB" memory.required.kv="768.0 MiB" memory.weights.total="2.1 GiB" memory.weights.repeating="2.0 GiB" memory.weights.nonrepeating="77.1 MiB" memory.graph.full="156.0 MiB" memory.graph.partial="175.1 MiB"
+May 18 17:07:49 dereklin-AB350M-Gaming-3 ollama[10717]: time=2024-05-18T17:07:49.314+08:00 level=INFO source=server.go:320 msg="starting llama server" cmd="/tmp/ollama2108205731/runners/cuda_v11/ollama_llama_server --model /usr/share/ollama/.ollama/models/blobs/sha256-4fed7364ee3e0c7cb4fe0880148bfdfcd1b630981efa0802a6b62ee52e7da97e --ctx-size 2048 --batch-size 512 --embedding --log-disable --n-gpu-layers 33 --parallel 1 --port 43889"
+May 18 17:07:49 dereklin-AB350M-Gaming-3 ollama[10717]: time=2024-05-18T17:07:49.314+08:00 level=INFO source=sched.go:338 msg="loaded runners" count=1
+May 18 17:07:49 dereklin-AB350M-Gaming-3 ollama[10717]: time=2024-05-18T17:07:49.314+08:00 level=INFO source=server.go:504 msg="waiting for llama runner to start responding"
+May 18 17:07:49 dereklin-AB350M-Gaming-3 ollama[10717]: time=2024-05-18T17:07:49.314+08:00 level=INFO source=server.go:540 msg="waiting for server to become available" status="llm server error"
+May 18 17:07:49 dereklin-AB350M-Gaming-3 ollama[11799]: INFO [main] build info | build=1 commit="952d03d" tid="124459042758656" timestamp=1716023269
+May 18 17:07:49 dereklin-AB350M-Gaming-3 ollama[11799]: INFO [main] system info | n_threads=6 n_threads_batch=-1 system_info="AVX = 1 | AVX_VNNI = 0 | AVX2 = 0 | AVX512 = 0 | AVX512_VBMI = 0 | AVX512_VNNI = 0 | FMA = 0 | NEON = 0 | ARM_FMA = 0 | F16C = 0 | FP16_VA = 0 | WASM_SIMD = 0 | BLAS = 1 | SSE3 = 1 | SSSE3 = 1 | VSX = 0 | MATMUL_INT8 = 0 | LLAMAFILE = 1 | " tid="124459042758656" timestamp=1716023269 total_threads=12
+May 18 17:07:49 dereklin-AB350M-Gaming-3 ollama[11799]: INFO [main] HTTP server listening | hostname="127.0.0.1" n_threads_http="11" port="43889" tid="124459042758656" timestamp=1716023269
+May 18 17:07:49 dereklin-AB350M-Gaming-3 ollama[10717]: llama_model_loader: loaded meta data with 25 key-value pairs and 291 tensors from /usr/share/ollama/.ollama/models/blobs/sha256-4fed7364ee3e0c7cb4fe0880148bfdfcd1b630981efa0802a6b62ee52e7da97e (version GGUF V3 (latest))
+May 18 17:07:49 dereklin-AB350M-Gaming-3 ollama[10717]: llama_model_loader: Dumping metadata keys/values. Note: KV overrides do not apply in this output.
+May 18 17:07:49 dereklin-AB350M-Gaming-3 ollama[10717]: llama_model_loader: - kv   0:                       general.architecture str              = llama
+May 18 17:07:49 dereklin-AB350M-Gaming-3 ollama[10717]: llama_model_loader: - kv   1:                               general.name str              = LLaMA v2
+May 18 17:07:49 dereklin-AB350M-Gaming-3 ollama[10717]: llama_model_loader: - kv   2:                           llama.vocab_size u32              = 32064
+May 18 17:07:49 dereklin-AB350M-Gaming-3 ollama[10717]: llama_model_loader: - kv   3:                       llama.context_length u32              = 4096
+May 18 17:07:49 dereklin-AB350M-Gaming-3 ollama[10717]: llama_model_loader: - kv   4:                     llama.embedding_length u32              = 3072
+May 18 17:07:49 dereklin-AB350M-Gaming-3 ollama[10717]: llama_model_loader: - kv   5:                          llama.block_count u32              = 32
+May 18 17:07:49 dereklin-AB350M-Gaming-3 ollama[10717]: llama_model_loader: - kv   6:                  llama.feed_forward_length u32              = 8192
+May 18 17:07:49 dereklin-AB350M-Gaming-3 ollama[10717]: llama_model_loader: - kv   7:                 llama.rope.dimension_count u32              = 96
+May 18 17:07:49 dereklin-AB350M-Gaming-3 ollama[10717]: llama_model_loader: - kv   8:                 llama.attention.head_count u32              = 32
+May 18 17:07:49 dereklin-AB350M-Gaming-3 ollama[10717]: llama_model_loader: - kv   9:              llama.attention.head_count_kv u32              = 32
+May 18 17:07:49 dereklin-AB350M-Gaming-3 ollama[10717]: llama_model_loader: - kv  10:     llama.attention.layer_norm_rms_epsilon f32              = 0.000010
+May 18 17:07:49 dereklin-AB350M-Gaming-3 ollama[10717]: llama_model_loader: - kv  11:                       llama.rope.freq_base f32              = 10000.000000
+May 18 17:07:49 dereklin-AB350M-Gaming-3 ollama[10717]: llama_model_loader: - kv  12:                          general.file_type u32              = 15
+May 18 17:07:49 dereklin-AB350M-Gaming-3 ollama[10717]: llama_model_loader: - kv  13:                       tokenizer.ggml.model str              = llama
+May 18 17:07:49 dereklin-AB350M-Gaming-3 ollama[10717]: llama_model_loader: - kv  14:                      tokenizer.ggml.tokens arr[str,32064]   = ["<unk>", "<s>", "</s>", "<0x00>", "<...
+May 18 17:07:49 dereklin-AB350M-Gaming-3 ollama[10717]: llama_model_loader: - kv  15:                      tokenizer.ggml.scores arr[f32,32064]   = [0.000000, 0.000000, 0.000000, 0.0000...
+May 18 17:07:49 dereklin-AB350M-Gaming-3 ollama[10717]: llama_model_loader: - kv  16:                  tokenizer.ggml.token_type arr[i32,32064]   = [2, 3, 3, 6, 6, 6, 6, 6, 6, 6, 6, 6, ...
+May 18 17:07:49 dereklin-AB350M-Gaming-3 ollama[10717]: llama_model_loader: - kv  17:                tokenizer.ggml.bos_token_id u32              = 1
+May 18 17:07:49 dereklin-AB350M-Gaming-3 ollama[10717]: llama_model_loader: - kv  18:                tokenizer.ggml.eos_token_id u32              = 32000
+May 18 17:07:49 dereklin-AB350M-Gaming-3 ollama[10717]: llama_model_loader: - kv  19:            tokenizer.ggml.unknown_token_id u32              = 0
+May 18 17:07:49 dereklin-AB350M-Gaming-3 ollama[10717]: llama_model_loader: - kv  20:            tokenizer.ggml.padding_token_id u32              = 32000
+May 18 17:07:49 dereklin-AB350M-Gaming-3 ollama[10717]: llama_model_loader: - kv  21:               tokenizer.ggml.add_bos_token bool             = true
+May 18 17:07:49 dereklin-AB350M-Gaming-3 ollama[10717]: llama_model_loader: - kv  22:               tokenizer.ggml.add_eos_token bool             = false
+May 18 17:07:49 dereklin-AB350M-Gaming-3 ollama[10717]: llama_model_loader: - kv  23:                    tokenizer.chat_template str              = {{ bos_token }}{% for message in mess...
+May 18 17:07:49 dereklin-AB350M-Gaming-3 ollama[10717]: llama_model_loader: - kv  24:               general.quantization_version u32              = 2
+May 18 17:07:49 dereklin-AB350M-Gaming-3 ollama[10717]: llama_model_loader: - type  f32:   65 tensors
+May 18 17:07:49 dereklin-AB350M-Gaming-3 ollama[10717]: llama_model_loader: - type q4_K:  193 tensors
+May 18 17:07:49 dereklin-AB350M-Gaming-3 ollama[10717]: llama_model_loader: - type q6_K:   33 tensors
+May 18 17:07:49 dereklin-AB350M-Gaming-3 ollama[10717]: llm_load_vocab: special tokens definition check successful ( 323/32064 ).
+May 18 17:07:49 dereklin-AB350M-Gaming-3 ollama[10717]: llm_load_print_meta: format           = GGUF V3 (latest)
+May 18 17:07:49 dereklin-AB350M-Gaming-3 ollama[10717]: llm_load_print_meta: arch             = llama
+May 18 17:07:49 dereklin-AB350M-Gaming-3 ollama[10717]: llm_load_print_meta: vocab type       = SPM
+May 18 17:07:49 dereklin-AB350M-Gaming-3 ollama[10717]: llm_load_print_meta: n_vocab          = 32064
+May 18 17:07:49 dereklin-AB350M-Gaming-3 ollama[10717]: llm_load_print_meta: n_merges         = 0
+May 18 17:07:49 dereklin-AB350M-Gaming-3 ollama[10717]: llm_load_print_meta: n_ctx_train      = 4096
+May 18 17:07:49 dereklin-AB350M-Gaming-3 ollama[10717]: llm_load_print_meta: n_embd           = 3072
+May 18 17:07:49 dereklin-AB350M-Gaming-3 ollama[10717]: llm_load_print_meta: n_head           = 32
+May 18 17:07:49 dereklin-AB350M-Gaming-3 ollama[10717]: llm_load_print_meta: n_head_kv        = 32
+May 18 17:07:49 dereklin-AB350M-Gaming-3 ollama[10717]: llm_load_print_meta: n_layer          = 32
+May 18 17:07:49 dereklin-AB350M-Gaming-3 ollama[10717]: llm_load_print_meta: n_rot            = 96
+May 18 17:07:49 dereklin-AB350M-Gaming-3 ollama[10717]: llm_load_print_meta: n_embd_head_k    = 96
+May 18 17:07:49 dereklin-AB350M-Gaming-3 ollama[10717]: llm_load_print_meta: n_embd_head_v    = 96
+May 18 17:07:49 dereklin-AB350M-Gaming-3 ollama[10717]: llm_load_print_meta: n_gqa            = 1
+May 18 17:07:49 dereklin-AB350M-Gaming-3 ollama[10717]: llm_load_print_meta: n_embd_k_gqa     = 3072
+May 18 17:07:49 dereklin-AB350M-Gaming-3 ollama[10717]: llm_load_print_meta: n_embd_v_gqa     = 3072
+May 18 17:07:49 dereklin-AB350M-Gaming-3 ollama[10717]: llm_load_print_meta: f_norm_eps       = 0.0e+00
+May 18 17:07:49 dereklin-AB350M-Gaming-3 ollama[10717]: llm_load_print_meta: f_norm_rms_eps   = 1.0e-05
+May 18 17:07:49 dereklin-AB350M-Gaming-3 ollama[10717]: llm_load_print_meta: f_clamp_kqv      = 0.0e+00
+May 18 17:07:49 dereklin-AB350M-Gaming-3 ollama[10717]: llm_load_print_meta: f_max_alibi_bias = 0.0e+00
+May 18 17:07:49 dereklin-AB350M-Gaming-3 ollama[10717]: llm_load_print_meta: f_logit_scale    = 0.0e+00
+May 18 17:07:49 dereklin-AB350M-Gaming-3 ollama[10717]: llm_load_print_meta: n_ff             = 8192
+May 18 17:07:49 dereklin-AB350M-Gaming-3 ollama[10717]: llm_load_print_meta: n_expert         = 0
+May 18 17:07:49 dereklin-AB350M-Gaming-3 ollama[10717]: llm_load_print_meta: n_expert_used    = 0
+May 18 17:07:49 dereklin-AB350M-Gaming-3 ollama[10717]: llm_load_print_meta: causal attn      = 1
+May 18 17:07:49 dereklin-AB350M-Gaming-3 ollama[10717]: llm_load_print_meta: pooling type     = 0
+May 18 17:07:49 dereklin-AB350M-Gaming-3 ollama[10717]: llm_load_print_meta: rope type        = 0
+May 18 17:07:49 dereklin-AB350M-Gaming-3 ollama[10717]: llm_load_print_meta: rope scaling     = linear
+May 18 17:07:49 dereklin-AB350M-Gaming-3 ollama[10717]: llm_load_print_meta: freq_base_train  = 10000.0
+May 18 17:07:49 dereklin-AB350M-Gaming-3 ollama[10717]: llm_load_print_meta: freq_scale_train = 1
+May 18 17:07:49 dereklin-AB350M-Gaming-3 ollama[10717]: llm_load_print_meta: n_yarn_orig_ctx  = 4096
+May 18 17:07:49 dereklin-AB350M-Gaming-3 ollama[10717]: llm_load_print_meta: rope_finetuned   = unknown
+May 18 17:07:49 dereklin-AB350M-Gaming-3 ollama[10717]: llm_load_print_meta: ssm_d_conv       = 0
+May 18 17:07:49 dereklin-AB350M-Gaming-3 ollama[10717]: llm_load_print_meta: ssm_d_inner      = 0
+May 18 17:07:49 dereklin-AB350M-Gaming-3 ollama[10717]: llm_load_print_meta: ssm_d_state      = 0
+May 18 17:07:49 dereklin-AB350M-Gaming-3 ollama[10717]: llm_load_print_meta: ssm_dt_rank      = 0
+May 18 17:07:49 dereklin-AB350M-Gaming-3 ollama[10717]: llm_load_print_meta: model type       = 7B
+May 18 17:07:49 dereklin-AB350M-Gaming-3 ollama[10717]: llm_load_print_meta: model ftype      = Q4_K - Medium
+May 18 17:07:49 dereklin-AB350M-Gaming-3 ollama[10717]: llm_load_print_meta: model params     = 3.82 B
+May 18 17:07:49 dereklin-AB350M-Gaming-3 ollama[10717]: llm_load_print_meta: model size       = 2.16 GiB (4.85 BPW)
+May 18 17:07:49 dereklin-AB350M-Gaming-3 ollama[10717]: llm_load_print_meta: general.name     = LLaMA v2
+May 18 17:07:49 dereklin-AB350M-Gaming-3 ollama[10717]: llm_load_print_meta: BOS token        = 1 '<s>'
+May 18 17:07:49 dereklin-AB350M-Gaming-3 ollama[10717]: llm_load_print_meta: EOS token        = 32000 '<|endoftext|>'
+May 18 17:07:49 dereklin-AB350M-Gaming-3 ollama[10717]: llm_load_print_meta: UNK token        = 0 '<unk>'
+May 18 17:07:49 dereklin-AB350M-Gaming-3 ollama[10717]: llm_load_print_meta: PAD token        = 32000 '<|endoftext|>'
+May 18 17:07:49 dereklin-AB350M-Gaming-3 ollama[10717]: llm_load_print_meta: LF token         = 13 '<0x0A>'
+May 18 17:07:49 dereklin-AB350M-Gaming-3 ollama[10717]: llm_load_print_meta: EOT token        = 32007 '<|end|>'
+May 18 17:07:49 dereklin-AB350M-Gaming-3 ollama[10717]: ggml_cuda_init: GGML_CUDA_FORCE_MMQ:   yes
+May 18 17:07:49 dereklin-AB350M-Gaming-3 ollama[10717]: ggml_cuda_init: CUDA_USE_TENSOR_CORES: no
+May 18 17:07:49 dereklin-AB350M-Gaming-3 ollama[10717]: ggml_cuda_init: found 1 CUDA devices:
+May 18 17:07:49 dereklin-AB350M-Gaming-3 ollama[10717]:   Device 0: NVIDIA GeForce RTX 4070 Ti SUPER, compute capability 8.9, VMM: yes
+May 18 17:07:49 dereklin-AB350M-Gaming-3 ollama[10717]: llm_load_tensors: ggml ctx size =    0.30 MiB
+May 18 17:07:49 dereklin-AB350M-Gaming-3 ollama[10717]: time=2024-05-18T17:07:49.760+08:00 level=INFO source=server.go:540 msg="waiting for server to become available" status="llm server loading model"
+May 18 17:07:49 dereklin-AB350M-Gaming-3 ollama[10717]: llm_load_tensors: offloading 32 repeating layers to GPU
+May 18 17:07:49 dereklin-AB350M-Gaming-3 ollama[10717]: llm_load_tensors: offloading non-repeating layers to GPU
+May 18 17:07:49 dereklin-AB350M-Gaming-3 ollama[10717]: llm_load_tensors: offloaded 33/33 layers to GPU
+May 18 17:07:49 dereklin-AB350M-Gaming-3 ollama[10717]: llm_load_tensors:        CPU buffer size =    52.84 MiB
+May 18 17:07:49 dereklin-AB350M-Gaming-3 ollama[10717]: llm_load_tensors:      CUDA0 buffer size =  2157.94 MiB
+May 18 17:07:50 dereklin-AB350M-Gaming-3 ollama[10717]: .................................................................................................
+May 18 17:07:50 dereklin-AB350M-Gaming-3 ollama[10717]: llama_new_context_with_model: n_ctx      = 2048
+May 18 17:07:50 dereklin-AB350M-Gaming-3 ollama[10717]: llama_new_context_with_model: n_batch    = 512
+May 18 17:07:50 dereklin-AB350M-Gaming-3 ollama[10717]: llama_new_context_with_model: n_ubatch   = 512
+May 18 17:07:50 dereklin-AB350M-Gaming-3 ollama[10717]: llama_new_context_with_model: freq_base  = 10000.0
+May 18 17:07:50 dereklin-AB350M-Gaming-3 ollama[10717]: llama_new_context_with_model: freq_scale = 1
+May 18 17:07:50 dereklin-AB350M-Gaming-3 ollama[10717]: llama_kv_cache_init:      CUDA0 KV buffer size =   768.00 MiB
+May 18 17:07:50 dereklin-AB350M-Gaming-3 ollama[10717]: llama_new_context_with_model: KV self size  =  768.00 MiB, K (f16):  384.00 MiB, V (f16):  384.00 MiB
+May 18 17:07:50 dereklin-AB350M-Gaming-3 ollama[10717]: llama_new_context_with_model:  CUDA_Host  output buffer size =     0.13 MiB
+May 18 17:07:50 dereklin-AB350M-Gaming-3 ollama[10717]: llama_new_context_with_model:      CUDA0 compute buffer size =   156.00 MiB
+May 18 17:07:50 dereklin-AB350M-Gaming-3 ollama[10717]: llama_new_context_with_model:  CUDA_Host compute buffer size =    10.01 MiB
+May 18 17:07:50 dereklin-AB350M-Gaming-3 ollama[10717]: llama_new_context_with_model: graph nodes  = 1030
+May 18 17:07:50 dereklin-AB350M-Gaming-3 ollama[10717]: llama_new_context_with_model: graph splits = 2
+May 18 17:07:51 dereklin-AB350M-Gaming-3 ollama[11799]: INFO [main] model loaded | tid="124459042758656" timestamp=1716023271
+May 18 17:07:51 dereklin-AB350M-Gaming-3 ollama[10717]: time=2024-05-18T17:07:51.268+08:00 level=INFO source=server.go:545 msg="llama runner started in 1.95 seconds"
+May 18 17:07:51 dereklin-AB350M-Gaming-3 ollama[10717]: [GIN] 2024/05/18 - 17:07:51 | 200 |   2.35431733s |       127.0.0.1 | POST     "/api/chat"
+May 18 17:08:51 dereklin-AB350M-Gaming-3 ollama[10717]: [GIN] 2024/05/18 - 17:08:51 | 200 |   831.31014ms |       127.0.0.1 | POST     "/api/chat"
+May 18 17:09:19 dereklin-AB350M-Gaming-3 ollama[10717]: [GIN] 2024/05/18 - 17:09:19 | 200 |  2.555500495s |       127.0.0.1 | POST     "/api/chat"
+May 18 17:09:48 dereklin-AB350M-Gaming-3 ollama[10717]: [GIN] 2024/05/18 - 17:09:48 | 200 | 18.435234758s |       127.0.0.1 | POST     "/api/chat"
+May 18 19:53:33 dereklin-AB350M-Gaming-3 ollama[10717]: time=2024-05-18T19:53:33.669+08:00 level=INFO source=memory.go:133 msg="offload to gpu" layers.requested=-1 layers.real=33 memory.available="14.6 GiB" memory.required.full="3.5 GiB" memory.required.partial="3.5 GiB" memory.required.kv="768.0 MiB" memory.weights.total="2.1 GiB" memory.weights.repeating="2.0 GiB" memory.weights.nonrepeating="77.1 MiB" memory.graph.full="156.0 MiB" memory.graph.partial="175.1 MiB"
+May 18 19:53:33 dereklin-AB350M-Gaming-3 ollama[10717]: time=2024-05-18T19:53:33.670+08:00 level=INFO source=memory.go:133 msg="offload to gpu" layers.requested=-1 layers.real=33 memory.available="14.6 GiB" memory.required.full="3.5 GiB" memory.required.partial="3.5 GiB" memory.required.kv="768.0 MiB" memory.weights.total="2.1 GiB" memory.weights.repeating="2.0 GiB" memory.weights.nonrepeating="77.1 MiB" memory.graph.full="156.0 MiB" memory.graph.partial="175.1 MiB"
+May 18 19:53:33 dereklin-AB350M-Gaming-3 ollama[10717]: time=2024-05-18T19:53:33.670+08:00 level=INFO source=server.go:320 msg="starting llama server" cmd="/tmp/ollama2108205731/runners/cuda_v11/ollama_llama_server --model /usr/share/ollama/.ollama/models/blobs/sha256-4fed7364ee3e0c7cb4fe0880148bfdfcd1b630981efa0802a6b62ee52e7da97e --ctx-size 2048 --batch-size 512 --embedding --log-disable --n-gpu-layers 33 --parallel 1 --port 39461"
+May 18 19:53:33 dereklin-AB350M-Gaming-3 ollama[10717]: time=2024-05-18T19:53:33.671+08:00 level=INFO source=sched.go:338 msg="loaded runners" count=1
+May 18 19:53:33 dereklin-AB350M-Gaming-3 ollama[10717]: time=2024-05-18T19:53:33.671+08:00 level=INFO source=server.go:504 msg="waiting for llama runner to start responding"
+May 18 19:53:33 dereklin-AB350M-Gaming-3 ollama[10717]: time=2024-05-18T19:53:33.671+08:00 level=INFO source=server.go:540 msg="waiting for server to become available" status="llm server error"
+May 18 19:53:33 dereklin-AB350M-Gaming-3 ollama[22486]: INFO [main] build info | build=1 commit="952d03d" tid="138761093484544" timestamp=1716033213
+May 18 19:53:33 dereklin-AB350M-Gaming-3 ollama[22486]: INFO [main] system info | n_threads=6 n_threads_batch=-1 system_info="AVX = 1 | AVX_VNNI = 0 | AVX2 = 0 | AVX512 = 0 | AVX512_VBMI = 0 | AVX512_VNNI = 0 | FMA = 0 | NEON = 0 | ARM_FMA = 0 | F16C = 0 | FP16_VA = 0 | WASM_SIMD = 0 | BLAS = 1 | SSE3 = 1 | SSSE3 = 1 | VSX = 0 | MATMUL_INT8 = 0 | LLAMAFILE = 1 | " tid="138761093484544" timestamp=1716033213 total_threads=12
+May 18 19:53:33 dereklin-AB350M-Gaming-3 ollama[22486]: INFO [main] HTTP server listening | hostname="127.0.0.1" n_threads_http="11" port="39461" tid="138761093484544" timestamp=1716033213
+May 18 19:53:33 dereklin-AB350M-Gaming-3 ollama[10717]: llama_model_loader: loaded meta data with 25 key-value pairs and 291 tensors from /usr/share/ollama/.ollama/models/blobs/sha256-4fed7364ee3e0c7cb4fe0880148bfdfcd1b630981efa0802a6b62ee52e7da97e (version GGUF V3 (latest))
+May 18 19:53:33 dereklin-AB350M-Gaming-3 ollama[10717]: llama_model_loader: Dumping metadata keys/values. Note: KV overrides do not apply in this output.
+May 18 19:53:33 dereklin-AB350M-Gaming-3 ollama[10717]: llama_model_loader: - kv   0:                       general.architecture str              = llama
+May 18 19:53:33 dereklin-AB350M-Gaming-3 ollama[10717]: llama_model_loader: - kv   1:                               general.name str              = LLaMA v2
+May 18 19:53:33 dereklin-AB350M-Gaming-3 ollama[10717]: llama_model_loader: - kv   2:                           llama.vocab_size u32              = 32064
+May 18 19:53:33 dereklin-AB350M-Gaming-3 ollama[10717]: llama_model_loader: - kv   3:                       llama.context_length u32              = 4096
+May 18 19:53:33 dereklin-AB350M-Gaming-3 ollama[10717]: llama_model_loader: - kv   4:                     llama.embedding_length u32              = 3072
+May 18 19:53:33 dereklin-AB350M-Gaming-3 ollama[10717]: llama_model_loader: - kv   5:                          llama.block_count u32              = 32
+May 18 19:53:33 dereklin-AB350M-Gaming-3 ollama[10717]: llama_model_loader: - kv   6:                  llama.feed_forward_length u32              = 8192
+May 18 19:53:33 dereklin-AB350M-Gaming-3 ollama[10717]: llama_model_loader: - kv   7:                 llama.rope.dimension_count u32              = 96
+May 18 19:53:33 dereklin-AB350M-Gaming-3 ollama[10717]: llama_model_loader: - kv   8:                 llama.attention.head_count u32              = 32
+May 18 19:53:33 dereklin-AB350M-Gaming-3 ollama[10717]: llama_model_loader: - kv   9:              llama.attention.head_count_kv u32              = 32
+May 18 19:53:33 dereklin-AB350M-Gaming-3 ollama[10717]: llama_model_loader: - kv  10:     llama.attention.layer_norm_rms_epsilon f32              = 0.000010
+May 18 19:53:33 dereklin-AB350M-Gaming-3 ollama[10717]: llama_model_loader: - kv  11:                       llama.rope.freq_base f32              = 10000.000000
+May 18 19:53:33 dereklin-AB350M-Gaming-3 ollama[10717]: llama_model_loader: - kv  12:                          general.file_type u32              = 15
+May 18 19:53:33 dereklin-AB350M-Gaming-3 ollama[10717]: llama_model_loader: - kv  13:                       tokenizer.ggml.model str              = llama
+May 18 19:53:33 dereklin-AB350M-Gaming-3 ollama[10717]: llama_model_loader: - kv  14:                      tokenizer.ggml.tokens arr[str,32064]   = ["<unk>", "<s>", "</s>", "<0x00>", "<...
+May 18 19:53:33 dereklin-AB350M-Gaming-3 ollama[10717]: llama_model_loader: - kv  15:                      tokenizer.ggml.scores arr[f32,32064]   = [0.000000, 0.000000, 0.000000, 0.0000...
+May 18 19:53:33 dereklin-AB350M-Gaming-3 ollama[10717]: llama_model_loader: - kv  16:                  tokenizer.ggml.token_type arr[i32,32064]   = [2, 3, 3, 6, 6, 6, 6, 6, 6, 6, 6, 6, ...
+May 18 19:53:33 dereklin-AB350M-Gaming-3 ollama[10717]: llama_model_loader: - kv  17:                tokenizer.ggml.bos_token_id u32              = 1
+May 18 19:53:33 dereklin-AB350M-Gaming-3 ollama[10717]: llama_model_loader: - kv  18:                tokenizer.ggml.eos_token_id u32              = 32000
+May 18 19:53:33 dereklin-AB350M-Gaming-3 ollama[10717]: llama_model_loader: - kv  19:            tokenizer.ggml.unknown_token_id u32              = 0
+May 18 19:53:33 dereklin-AB350M-Gaming-3 ollama[10717]: llama_model_loader: - kv  20:            tokenizer.ggml.padding_token_id u32              = 32000
+May 18 19:53:33 dereklin-AB350M-Gaming-3 ollama[10717]: llama_model_loader: - kv  21:               tokenizer.ggml.add_bos_token bool             = true
+May 18 19:53:33 dereklin-AB350M-Gaming-3 ollama[10717]: llama_model_loader: - kv  22:               tokenizer.ggml.add_eos_token bool             = false
+May 18 19:53:33 dereklin-AB350M-Gaming-3 ollama[10717]: llama_model_loader: - kv  23:                    tokenizer.chat_template str              = {{ bos_token }}{% for message in mess...
+May 18 19:53:33 dereklin-AB350M-Gaming-3 ollama[10717]: llama_model_loader: - kv  24:               general.quantization_version u32              = 2
+May 18 19:53:33 dereklin-AB350M-Gaming-3 ollama[10717]: llama_model_loader: - type  f32:   65 tensors
+May 18 19:53:33 dereklin-AB350M-Gaming-3 ollama[10717]: llama_model_loader: - type q4_K:  193 tensors
+May 18 19:53:33 dereklin-AB350M-Gaming-3 ollama[10717]: llama_model_loader: - type q6_K:   33 tensors
+May 18 19:53:33 dereklin-AB350M-Gaming-3 ollama[10717]: llm_load_vocab: special tokens definition check successful ( 323/32064 ).
+May 18 19:53:33 dereklin-AB350M-Gaming-3 ollama[10717]: llm_load_print_meta: format           = GGUF V3 (latest)
+May 18 19:53:33 dereklin-AB350M-Gaming-3 ollama[10717]: llm_load_print_meta: arch             = llama
+May 18 19:53:33 dereklin-AB350M-Gaming-3 ollama[10717]: llm_load_print_meta: vocab type       = SPM
+May 18 19:53:33 dereklin-AB350M-Gaming-3 ollama[10717]: llm_load_print_meta: n_vocab          = 32064
+May 18 19:53:33 dereklin-AB350M-Gaming-3 ollama[10717]: llm_load_print_meta: n_merges         = 0
+May 18 19:53:33 dereklin-AB350M-Gaming-3 ollama[10717]: llm_load_print_meta: n_ctx_train      = 4096
+May 18 19:53:33 dereklin-AB350M-Gaming-3 ollama[10717]: llm_load_print_meta: n_embd           = 3072
+May 18 19:53:33 dereklin-AB350M-Gaming-3 ollama[10717]: llm_load_print_meta: n_head           = 32
+May 18 19:53:33 dereklin-AB350M-Gaming-3 ollama[10717]: llm_load_print_meta: n_head_kv        = 32
+May 18 19:53:33 dereklin-AB350M-Gaming-3 ollama[10717]: llm_load_print_meta: n_layer          = 32
+May 18 19:53:33 dereklin-AB350M-Gaming-3 ollama[10717]: llm_load_print_meta: n_rot            = 96
+May 18 19:53:33 dereklin-AB350M-Gaming-3 ollama[10717]: llm_load_print_meta: n_embd_head_k    = 96
+May 18 19:53:33 dereklin-AB350M-Gaming-3 ollama[10717]: llm_load_print_meta: n_embd_head_v    = 96
+May 18 19:53:33 dereklin-AB350M-Gaming-3 ollama[10717]: llm_load_print_meta: n_gqa            = 1
+May 18 19:53:33 dereklin-AB350M-Gaming-3 ollama[10717]: llm_load_print_meta: n_embd_k_gqa     = 3072
+May 18 19:53:33 dereklin-AB350M-Gaming-3 ollama[10717]: llm_load_print_meta: n_embd_v_gqa     = 3072
+May 18 19:53:33 dereklin-AB350M-Gaming-3 ollama[10717]: llm_load_print_meta: f_norm_eps       = 0.0e+00
+May 18 19:53:33 dereklin-AB350M-Gaming-3 ollama[10717]: llm_load_print_meta: f_norm_rms_eps   = 1.0e-05
+May 18 19:53:33 dereklin-AB350M-Gaming-3 ollama[10717]: llm_load_print_meta: f_clamp_kqv      = 0.0e+00
+May 18 19:53:33 dereklin-AB350M-Gaming-3 ollama[10717]: llm_load_print_meta: f_max_alibi_bias = 0.0e+00
+May 18 19:53:33 dereklin-AB350M-Gaming-3 ollama[10717]: llm_load_print_meta: f_logit_scale    = 0.0e+00
+May 18 19:53:33 dereklin-AB350M-Gaming-3 ollama[10717]: llm_load_print_meta: n_ff             = 8192
+May 18 19:53:33 dereklin-AB350M-Gaming-3 ollama[10717]: llm_load_print_meta: n_expert         = 0
+May 18 19:53:33 dereklin-AB350M-Gaming-3 ollama[10717]: llm_load_print_meta: n_expert_used    = 0
+May 18 19:53:33 dereklin-AB350M-Gaming-3 ollama[10717]: llm_load_print_meta: causal attn      = 1
+May 18 19:53:33 dereklin-AB350M-Gaming-3 ollama[10717]: llm_load_print_meta: pooling type     = 0
+May 18 19:53:33 dereklin-AB350M-Gaming-3 ollama[10717]: llm_load_print_meta: rope type        = 0
+May 18 19:53:33 dereklin-AB350M-Gaming-3 ollama[10717]: llm_load_print_meta: rope scaling     = linear
+May 18 19:53:33 dereklin-AB350M-Gaming-3 ollama[10717]: llm_load_print_meta: freq_base_train  = 10000.0
+May 18 19:53:33 dereklin-AB350M-Gaming-3 ollama[10717]: llm_load_print_meta: freq_scale_train = 1
+May 18 19:53:33 dereklin-AB350M-Gaming-3 ollama[10717]: llm_load_print_meta: n_yarn_orig_ctx  = 4096
+May 18 19:53:33 dereklin-AB350M-Gaming-3 ollama[10717]: llm_load_print_meta: rope_finetuned   = unknown
+May 18 19:53:33 dereklin-AB350M-Gaming-3 ollama[10717]: llm_load_print_meta: ssm_d_conv       = 0
+May 18 19:53:33 dereklin-AB350M-Gaming-3 ollama[10717]: llm_load_print_meta: ssm_d_inner      = 0
+May 18 19:53:33 dereklin-AB350M-Gaming-3 ollama[10717]: llm_load_print_meta: ssm_d_state      = 0
+May 18 19:53:33 dereklin-AB350M-Gaming-3 ollama[10717]: llm_load_print_meta: ssm_dt_rank      = 0
+May 18 19:53:33 dereklin-AB350M-Gaming-3 ollama[10717]: llm_load_print_meta: model type       = 7B
+May 18 19:53:33 dereklin-AB350M-Gaming-3 ollama[10717]: llm_load_print_meta: model ftype      = Q4_K - Medium
+May 18 19:53:33 dereklin-AB350M-Gaming-3 ollama[10717]: llm_load_print_meta: model params     = 3.82 B
+May 18 19:53:33 dereklin-AB350M-Gaming-3 ollama[10717]: llm_load_print_meta: model size       = 2.16 GiB (4.85 BPW)
+May 18 19:53:33 dereklin-AB350M-Gaming-3 ollama[10717]: llm_load_print_meta: general.name     = LLaMA v2
+May 18 19:53:33 dereklin-AB350M-Gaming-3 ollama[10717]: llm_load_print_meta: BOS token        = 1 '<s>'
+May 18 19:53:33 dereklin-AB350M-Gaming-3 ollama[10717]: llm_load_print_meta: EOS token        = 32000 '<|endoftext|>'
+May 18 19:53:33 dereklin-AB350M-Gaming-3 ollama[10717]: llm_load_print_meta: UNK token        = 0 '<unk>'
+May 18 19:53:33 dereklin-AB350M-Gaming-3 ollama[10717]: llm_load_print_meta: PAD token        = 32000 '<|endoftext|>'
+May 18 19:53:33 dereklin-AB350M-Gaming-3 ollama[10717]: llm_load_print_meta: LF token         = 13 '<0x0A>'
+May 18 19:53:33 dereklin-AB350M-Gaming-3 ollama[10717]: llm_load_print_meta: EOT token        = 32007 '<|end|>'
+May 18 19:53:33 dereklin-AB350M-Gaming-3 ollama[10717]: ggml_cuda_init: GGML_CUDA_FORCE_MMQ:   yes
+May 18 19:53:33 dereklin-AB350M-Gaming-3 ollama[10717]: ggml_cuda_init: CUDA_USE_TENSOR_CORES: no
+May 18 19:53:33 dereklin-AB350M-Gaming-3 ollama[10717]: ggml_cuda_init: found 1 CUDA devices:
+May 18 19:53:33 dereklin-AB350M-Gaming-3 ollama[10717]:   Device 0: NVIDIA GeForce RTX 4070 Ti SUPER, compute capability 8.9, VMM: yes
+May 18 19:53:33 dereklin-AB350M-Gaming-3 ollama[10717]: llm_load_tensors: ggml ctx size =    0.30 MiB
+May 18 19:53:34 dereklin-AB350M-Gaming-3 ollama[10717]: time=2024-05-18T19:53:34.122+08:00 level=INFO source=server.go:540 msg="waiting for server to become available" status="llm server not responding"
+May 18 19:53:34 dereklin-AB350M-Gaming-3 ollama[10717]: llm_load_tensors: offloading 32 repeating layers to GPU
+May 18 19:53:34 dereklin-AB350M-Gaming-3 ollama[10717]: llm_load_tensors: offloading non-repeating layers to GPU
+May 18 19:53:34 dereklin-AB350M-Gaming-3 ollama[10717]: llm_load_tensors: offloaded 33/33 layers to GPU
+May 18 19:53:34 dereklin-AB350M-Gaming-3 ollama[10717]: llm_load_tensors:        CPU buffer size =    52.84 MiB
+May 18 19:53:34 dereklin-AB350M-Gaming-3 ollama[10717]: llm_load_tensors:      CUDA0 buffer size =  2157.94 MiB
+May 18 19:53:34 dereklin-AB350M-Gaming-3 ollama[10717]: ...................................................................time=2024-05-18T19:53:34.373+08:00 level=INFO source=server.go:540 msg="waiting for server to become available" status="llm server loading model"
+May 18 19:53:34 dereklin-AB350M-Gaming-3 ollama[10717]: ..............................
+May 18 19:53:34 dereklin-AB350M-Gaming-3 ollama[10717]: llama_new_context_with_model: n_ctx      = 2048
+May 18 19:53:34 dereklin-AB350M-Gaming-3 ollama[10717]: llama_new_context_with_model: n_batch    = 512
+May 18 19:53:34 dereklin-AB350M-Gaming-3 ollama[10717]: llama_new_context_with_model: n_ubatch   = 512
+May 18 19:53:34 dereklin-AB350M-Gaming-3 ollama[10717]: llama_new_context_with_model: freq_base  = 10000.0
+May 18 19:53:34 dereklin-AB350M-Gaming-3 ollama[10717]: llama_new_context_with_model: freq_scale = 1
+May 18 19:53:34 dereklin-AB350M-Gaming-3 ollama[10717]: llama_kv_cache_init:      CUDA0 KV buffer size =   768.00 MiB
+May 18 19:53:34 dereklin-AB350M-Gaming-3 ollama[10717]: llama_new_context_with_model: KV self size  =  768.00 MiB, K (f16):  384.00 MiB, V (f16):  384.00 MiB
+May 18 19:53:34 dereklin-AB350M-Gaming-3 ollama[10717]: llama_new_context_with_model:  CUDA_Host  output buffer size =     0.13 MiB
+May 18 19:53:34 dereklin-AB350M-Gaming-3 ollama[10717]: llama_new_context_with_model:      CUDA0 compute buffer size =   156.00 MiB
+May 18 19:53:34 dereklin-AB350M-Gaming-3 ollama[10717]: llama_new_context_with_model:  CUDA_Host compute buffer size =    10.01 MiB
+May 18 19:53:34 dereklin-AB350M-Gaming-3 ollama[10717]: llama_new_context_with_model: graph nodes  = 1030
+May 18 19:53:34 dereklin-AB350M-Gaming-3 ollama[10717]: llama_new_context_with_model: graph splits = 2
+May 18 19:53:35 dereklin-AB350M-Gaming-3 ollama[22486]: INFO [main] model loaded | tid="138761093484544" timestamp=1716033215
+May 18 19:53:35 dereklin-AB350M-Gaming-3 ollama[10717]: time=2024-05-18T19:53:35.630+08:00 level=INFO source=server.go:545 msg="llama runner started in 1.96 seconds"
+May 18 19:53:36 dereklin-AB350M-Gaming-3 ollama[10717]: [GIN] 2024/05/18 - 19:53:36 | 200 |  3.336427371s |       127.0.0.1 | POST     "/api/chat"
+May 18 22:31:01 dereklin-AB350M-Gaming-3 ollama[10717]: [GIN] 2024/05/18 - 22:31:01 | 404 |     278.424µs |       127.0.0.1 | POST     "/api/generate"
+May 18 22:31:21 dereklin-AB350M-Gaming-3 ollama[10717]: [GIN] 2024/05/18 - 22:31:21 | 404 |     165.973µs |       127.0.0.1 | POST     "/api/generate"
+May 18 22:32:01 dereklin-AB350M-Gaming-3 ollama[10717]: [GIN] 2024/05/18 - 22:32:01 | 200 |      54.563µs |       127.0.0.1 | HEAD     "/"
+May 18 22:32:01 dereklin-AB350M-Gaming-3 ollama[10717]: [GIN] 2024/05/18 - 22:32:01 | 200 |      14.347µs |       127.0.0.1 | GET      "/api/ps"
+May 18 22:32:05 dereklin-AB350M-Gaming-3 ollama[10717]: [GIN] 2024/05/18 - 22:32:05 | 200 |      36.669µs |       127.0.0.1 | HEAD     "/"
+May 18 22:32:05 dereklin-AB350M-Gaming-3 ollama[10717]: [GIN] 2024/05/18 - 22:32:05 | 200 |     827.418µs |       127.0.0.1 | GET      "/api/tags"
+May 18 22:32:15 dereklin-AB350M-Gaming-3 ollama[10717]: [GIN] 2024/05/18 - 22:32:15 | 404 |     147.057µs |       127.0.0.1 | POST     "/api/generate"
+May 18 22:32:30 dereklin-AB350M-Gaming-3 ollama[10717]: time=2024-05-18T22:32:30.463+08:00 level=INFO source=memory.go:133 msg="offload to gpu" layers.requested=-1 layers.real=33 memory.available="14.7 GiB" memory.required.full="3.5 GiB" memory.required.partial="3.5 GiB" memory.required.kv="768.0 MiB" memory.weights.total="2.1 GiB" memory.weights.repeating="2.0 GiB" memory.weights.nonrepeating="77.1 MiB" memory.graph.full="156.0 MiB" memory.graph.partial="175.1 MiB"
+May 18 22:32:30 dereklin-AB350M-Gaming-3 ollama[10717]: time=2024-05-18T22:32:30.463+08:00 level=INFO source=memory.go:133 msg="offload to gpu" layers.requested=-1 layers.real=33 memory.available="14.7 GiB" memory.required.full="3.5 GiB" memory.required.partial="3.5 GiB" memory.required.kv="768.0 MiB" memory.weights.total="2.1 GiB" memory.weights.repeating="2.0 GiB" memory.weights.nonrepeating="77.1 MiB" memory.graph.full="156.0 MiB" memory.graph.partial="175.1 MiB"
+May 18 22:32:30 dereklin-AB350M-Gaming-3 ollama[10717]: time=2024-05-18T22:32:30.463+08:00 level=INFO source=server.go:320 msg="starting llama server" cmd="/tmp/ollama2108205731/runners/cuda_v11/ollama_llama_server --model /usr/share/ollama/.ollama/models/blobs/sha256-4fed7364ee3e0c7cb4fe0880148bfdfcd1b630981efa0802a6b62ee52e7da97e --ctx-size 2048 --batch-size 512 --embedding --log-disable --n-gpu-layers 33 --parallel 1 --port 45213"
+May 18 22:32:30 dereklin-AB350M-Gaming-3 ollama[10717]: time=2024-05-18T22:32:30.464+08:00 level=INFO source=sched.go:338 msg="loaded runners" count=1
+May 18 22:32:30 dereklin-AB350M-Gaming-3 ollama[10717]: time=2024-05-18T22:32:30.464+08:00 level=INFO source=server.go:504 msg="waiting for llama runner to start responding"
+May 18 22:32:30 dereklin-AB350M-Gaming-3 ollama[10717]: time=2024-05-18T22:32:30.464+08:00 level=INFO source=server.go:540 msg="waiting for server to become available" status="llm server error"
+May 18 22:32:30 dereklin-AB350M-Gaming-3 ollama[32504]: INFO [main] build info | build=1 commit="952d03d" tid="125878822350848" timestamp=1716042750
+May 18 22:32:30 dereklin-AB350M-Gaming-3 ollama[32504]: INFO [main] system info | n_threads=6 n_threads_batch=-1 system_info="AVX = 1 | AVX_VNNI = 0 | AVX2 = 0 | AVX512 = 0 | AVX512_VBMI = 0 | AVX512_VNNI = 0 | FMA = 0 | NEON = 0 | ARM_FMA = 0 | F16C = 0 | FP16_VA = 0 | WASM_SIMD = 0 | BLAS = 1 | SSE3 = 1 | SSSE3 = 1 | VSX = 0 | MATMUL_INT8 = 0 | LLAMAFILE = 1 | " tid="125878822350848" timestamp=1716042750 total_threads=12
+May 18 22:32:30 dereklin-AB350M-Gaming-3 ollama[32504]: INFO [main] HTTP server listening | hostname="127.0.0.1" n_threads_http="11" port="45213" tid="125878822350848" timestamp=1716042750
+May 18 22:32:30 dereklin-AB350M-Gaming-3 ollama[10717]: llama_model_loader: loaded meta data with 25 key-value pairs and 291 tensors from /usr/share/ollama/.ollama/models/blobs/sha256-4fed7364ee3e0c7cb4fe0880148bfdfcd1b630981efa0802a6b62ee52e7da97e (version GGUF V3 (latest))
+May 18 22:32:30 dereklin-AB350M-Gaming-3 ollama[10717]: llama_model_loader: Dumping metadata keys/values. Note: KV overrides do not apply in this output.
+May 18 22:32:30 dereklin-AB350M-Gaming-3 ollama[10717]: llama_model_loader: - kv   0:                       general.architecture str              = llama
+May 18 22:32:30 dereklin-AB350M-Gaming-3 ollama[10717]: llama_model_loader: - kv   1:                               general.name str              = LLaMA v2
+May 18 22:32:30 dereklin-AB350M-Gaming-3 ollama[10717]: llama_model_loader: - kv   2:                           llama.vocab_size u32              = 32064
+May 18 22:32:30 dereklin-AB350M-Gaming-3 ollama[10717]: llama_model_loader: - kv   3:                       llama.context_length u32              = 4096
+May 18 22:32:30 dereklin-AB350M-Gaming-3 ollama[10717]: llama_model_loader: - kv   4:                     llama.embedding_length u32              = 3072
+May 18 22:32:30 dereklin-AB350M-Gaming-3 ollama[10717]: llama_model_loader: - kv   5:                          llama.block_count u32              = 32
+May 18 22:32:30 dereklin-AB350M-Gaming-3 ollama[10717]: llama_model_loader: - kv   6:                  llama.feed_forward_length u32              = 8192
+May 18 22:32:30 dereklin-AB350M-Gaming-3 ollama[10717]: llama_model_loader: - kv   7:                 llama.rope.dimension_count u32              = 96
+May 18 22:32:30 dereklin-AB350M-Gaming-3 ollama[10717]: llama_model_loader: - kv   8:                 llama.attention.head_count u32              = 32
+May 18 22:32:30 dereklin-AB350M-Gaming-3 ollama[10717]: llama_model_loader: - kv   9:              llama.attention.head_count_kv u32              = 32
+May 18 22:32:30 dereklin-AB350M-Gaming-3 ollama[10717]: llama_model_loader: - kv  10:     llama.attention.layer_norm_rms_epsilon f32              = 0.000010
+May 18 22:32:30 dereklin-AB350M-Gaming-3 ollama[10717]: llama_model_loader: - kv  11:                       llama.rope.freq_base f32              = 10000.000000
+May 18 22:32:30 dereklin-AB350M-Gaming-3 ollama[10717]: llama_model_loader: - kv  12:                          general.file_type u32              = 15
+May 18 22:32:30 dereklin-AB350M-Gaming-3 ollama[10717]: llama_model_loader: - kv  13:                       tokenizer.ggml.model str              = llama
+May 18 22:32:30 dereklin-AB350M-Gaming-3 ollama[10717]: llama_model_loader: - kv  14:                      tokenizer.ggml.tokens arr[str,32064]   = ["<unk>", "<s>", "</s>", "<0x00>", "<...
+May 18 22:32:30 dereklin-AB350M-Gaming-3 ollama[10717]: llama_model_loader: - kv  15:                      tokenizer.ggml.scores arr[f32,32064]   = [0.000000, 0.000000, 0.000000, 0.0000...
+May 18 22:32:30 dereklin-AB350M-Gaming-3 ollama[10717]: llama_model_loader: - kv  16:                  tokenizer.ggml.token_type arr[i32,32064]   = [2, 3, 3, 6, 6, 6, 6, 6, 6, 6, 6, 6, ...
+May 18 22:32:30 dereklin-AB350M-Gaming-3 ollama[10717]: llama_model_loader: - kv  17:                tokenizer.ggml.bos_token_id u32              = 1
+May 18 22:32:30 dereklin-AB350M-Gaming-3 ollama[10717]: llama_model_loader: - kv  18:                tokenizer.ggml.eos_token_id u32              = 32000
+May 18 22:32:30 dereklin-AB350M-Gaming-3 ollama[10717]: llama_model_loader: - kv  19:            tokenizer.ggml.unknown_token_id u32              = 0
+May 18 22:32:30 dereklin-AB350M-Gaming-3 ollama[10717]: llama_model_loader: - kv  20:            tokenizer.ggml.padding_token_id u32              = 32000
+May 18 22:32:30 dereklin-AB350M-Gaming-3 ollama[10717]: llama_model_loader: - kv  21:               tokenizer.ggml.add_bos_token bool             = true
+May 18 22:32:30 dereklin-AB350M-Gaming-3 ollama[10717]: llama_model_loader: - kv  22:               tokenizer.ggml.add_eos_token bool             = false
+May 18 22:32:30 dereklin-AB350M-Gaming-3 ollama[10717]: llama_model_loader: - kv  23:                    tokenizer.chat_template str              = {{ bos_token }}{% for message in mess...
+May 18 22:32:30 dereklin-AB350M-Gaming-3 ollama[10717]: llama_model_loader: - kv  24:               general.quantization_version u32              = 2
+May 18 22:32:30 dereklin-AB350M-Gaming-3 ollama[10717]: llama_model_loader: - type  f32:   65 tensors
+May 18 22:32:30 dereklin-AB350M-Gaming-3 ollama[10717]: llama_model_loader: - type q4_K:  193 tensors
+May 18 22:32:30 dereklin-AB350M-Gaming-3 ollama[10717]: llama_model_loader: - type q6_K:   33 tensors
+May 18 22:32:30 dereklin-AB350M-Gaming-3 ollama[10717]: llm_load_vocab: special tokens definition check successful ( 323/32064 ).
+May 18 22:32:30 dereklin-AB350M-Gaming-3 ollama[10717]: llm_load_print_meta: format           = GGUF V3 (latest)
+May 18 22:32:30 dereklin-AB350M-Gaming-3 ollama[10717]: llm_load_print_meta: arch             = llama
+May 18 22:32:30 dereklin-AB350M-Gaming-3 ollama[10717]: llm_load_print_meta: vocab type       = SPM
+May 18 22:32:30 dereklin-AB350M-Gaming-3 ollama[10717]: llm_load_print_meta: n_vocab          = 32064
+May 18 22:32:30 dereklin-AB350M-Gaming-3 ollama[10717]: llm_load_print_meta: n_merges         = 0
+May 18 22:32:30 dereklin-AB350M-Gaming-3 ollama[10717]: llm_load_print_meta: n_ctx_train      = 4096
+May 18 22:32:30 dereklin-AB350M-Gaming-3 ollama[10717]: llm_load_print_meta: n_embd           = 3072
+May 18 22:32:30 dereklin-AB350M-Gaming-3 ollama[10717]: llm_load_print_meta: n_head           = 32
+May 18 22:32:30 dereklin-AB350M-Gaming-3 ollama[10717]: llm_load_print_meta: n_head_kv        = 32
+May 18 22:32:30 dereklin-AB350M-Gaming-3 ollama[10717]: llm_load_print_meta: n_layer          = 32
+May 18 22:32:30 dereklin-AB350M-Gaming-3 ollama[10717]: llm_load_print_meta: n_rot            = 96
+May 18 22:32:30 dereklin-AB350M-Gaming-3 ollama[10717]: llm_load_print_meta: n_embd_head_k    = 96
+May 18 22:32:30 dereklin-AB350M-Gaming-3 ollama[10717]: llm_load_print_meta: n_embd_head_v    = 96
+May 18 22:32:30 dereklin-AB350M-Gaming-3 ollama[10717]: llm_load_print_meta: n_gqa            = 1
+May 18 22:32:30 dereklin-AB350M-Gaming-3 ollama[10717]: llm_load_print_meta: n_embd_k_gqa     = 3072
+May 18 22:32:30 dereklin-AB350M-Gaming-3 ollama[10717]: llm_load_print_meta: n_embd_v_gqa     = 3072
+May 18 22:32:30 dereklin-AB350M-Gaming-3 ollama[10717]: llm_load_print_meta: f_norm_eps       = 0.0e+00
+May 18 22:32:30 dereklin-AB350M-Gaming-3 ollama[10717]: llm_load_print_meta: f_norm_rms_eps   = 1.0e-05
+May 18 22:32:30 dereklin-AB350M-Gaming-3 ollama[10717]: llm_load_print_meta: f_clamp_kqv      = 0.0e+00
+May 18 22:32:30 dereklin-AB350M-Gaming-3 ollama[10717]: llm_load_print_meta: f_max_alibi_bias = 0.0e+00
+May 18 22:32:30 dereklin-AB350M-Gaming-3 ollama[10717]: llm_load_print_meta: f_logit_scale    = 0.0e+00
+May 18 22:32:30 dereklin-AB350M-Gaming-3 ollama[10717]: llm_load_print_meta: n_ff             = 8192
+May 18 22:32:30 dereklin-AB350M-Gaming-3 ollama[10717]: llm_load_print_meta: n_expert         = 0
+May 18 22:32:30 dereklin-AB350M-Gaming-3 ollama[10717]: llm_load_print_meta: n_expert_used    = 0
+May 18 22:32:30 dereklin-AB350M-Gaming-3 ollama[10717]: llm_load_print_meta: causal attn      = 1
+May 18 22:32:30 dereklin-AB350M-Gaming-3 ollama[10717]: llm_load_print_meta: pooling type     = 0
+May 18 22:32:30 dereklin-AB350M-Gaming-3 ollama[10717]: llm_load_print_meta: rope type        = 0
+May 18 22:32:30 dereklin-AB350M-Gaming-3 ollama[10717]: llm_load_print_meta: rope scaling     = linear
+May 18 22:32:30 dereklin-AB350M-Gaming-3 ollama[10717]: llm_load_print_meta: freq_base_train  = 10000.0
+May 18 22:32:30 dereklin-AB350M-Gaming-3 ollama[10717]: llm_load_print_meta: freq_scale_train = 1
+May 18 22:32:30 dereklin-AB350M-Gaming-3 ollama[10717]: llm_load_print_meta: n_yarn_orig_ctx  = 4096
+May 18 22:32:30 dereklin-AB350M-Gaming-3 ollama[10717]: llm_load_print_meta: rope_finetuned   = unknown
+May 18 22:32:30 dereklin-AB350M-Gaming-3 ollama[10717]: llm_load_print_meta: ssm_d_conv       = 0
+May 18 22:32:30 dereklin-AB350M-Gaming-3 ollama[10717]: llm_load_print_meta: ssm_d_inner      = 0
+May 18 22:32:30 dereklin-AB350M-Gaming-3 ollama[10717]: llm_load_print_meta: ssm_d_state      = 0
+May 18 22:32:30 dereklin-AB350M-Gaming-3 ollama[10717]: llm_load_print_meta: ssm_dt_rank      = 0
+May 18 22:32:30 dereklin-AB350M-Gaming-3 ollama[10717]: llm_load_print_meta: model type       = 7B
+May 18 22:32:30 dereklin-AB350M-Gaming-3 ollama[10717]: llm_load_print_meta: model ftype      = Q4_K - Medium
+May 18 22:32:30 dereklin-AB350M-Gaming-3 ollama[10717]: llm_load_print_meta: model params     = 3.82 B
+May 18 22:32:30 dereklin-AB350M-Gaming-3 ollama[10717]: llm_load_print_meta: model size       = 2.16 GiB (4.85 BPW)
+May 18 22:32:30 dereklin-AB350M-Gaming-3 ollama[10717]: llm_load_print_meta: general.name     = LLaMA v2
+May 18 22:32:30 dereklin-AB350M-Gaming-3 ollama[10717]: llm_load_print_meta: BOS token        = 1 '<s>'
+May 18 22:32:30 dereklin-AB350M-Gaming-3 ollama[10717]: llm_load_print_meta: EOS token        = 32000 '<|endoftext|>'
+May 18 22:32:30 dereklin-AB350M-Gaming-3 ollama[10717]: llm_load_print_meta: UNK token        = 0 '<unk>'
+May 18 22:32:30 dereklin-AB350M-Gaming-3 ollama[10717]: llm_load_print_meta: PAD token        = 32000 '<|endoftext|>'
+May 18 22:32:30 dereklin-AB350M-Gaming-3 ollama[10717]: llm_load_print_meta: LF token         = 13 '<0x0A>'
+May 18 22:32:30 dereklin-AB350M-Gaming-3 ollama[10717]: llm_load_print_meta: EOT token        = 32007 '<|end|>'
+May 18 22:32:30 dereklin-AB350M-Gaming-3 ollama[10717]: ggml_cuda_init: GGML_CUDA_FORCE_MMQ:   yes
+May 18 22:32:30 dereklin-AB350M-Gaming-3 ollama[10717]: ggml_cuda_init: CUDA_USE_TENSOR_CORES: no
+May 18 22:32:30 dereklin-AB350M-Gaming-3 ollama[10717]: ggml_cuda_init: found 1 CUDA devices:
+May 18 22:32:30 dereklin-AB350M-Gaming-3 ollama[10717]:   Device 0: NVIDIA GeForce RTX 4070 Ti SUPER, compute capability 8.9, VMM: yes
+May 18 22:32:30 dereklin-AB350M-Gaming-3 ollama[10717]: llm_load_tensors: ggml ctx size =    0.30 MiB
+May 18 22:32:30 dereklin-AB350M-Gaming-3 ollama[10717]: llm_load_tensors: offloading 32 repeating layers to GPU
+May 18 22:32:30 dereklin-AB350M-Gaming-3 ollama[10717]: llm_load_tensors: offloading non-repeating layers to GPU
+May 18 22:32:30 dereklin-AB350M-Gaming-3 ollama[10717]: llm_load_tensors: offloaded 33/33 layers to GPU
+May 18 22:32:30 dereklin-AB350M-Gaming-3 ollama[10717]: llm_load_tensors:        CPU buffer size =    52.84 MiB
+May 18 22:32:30 dereklin-AB350M-Gaming-3 ollama[10717]: llm_load_tensors:      CUDA0 buffer size =  2157.94 MiB
+May 18 22:32:30 dereklin-AB350M-Gaming-3 ollama[10717]: .time=2024-05-18T22:32:30.913+08:00 level=INFO source=server.go:540 msg="waiting for server to become available" status="llm server loading model"
+May 18 22:32:31 dereklin-AB350M-Gaming-3 ollama[10717]: ................................................................................................
+May 18 22:32:31 dereklin-AB350M-Gaming-3 ollama[10717]: llama_new_context_with_model: n_ctx      = 2048
+May 18 22:32:31 dereklin-AB350M-Gaming-3 ollama[10717]: llama_new_context_with_model: n_batch    = 512
+May 18 22:32:31 dereklin-AB350M-Gaming-3 ollama[10717]: llama_new_context_with_model: n_ubatch   = 512
+May 18 22:32:31 dereklin-AB350M-Gaming-3 ollama[10717]: llama_new_context_with_model: freq_base  = 10000.0
+May 18 22:32:31 dereklin-AB350M-Gaming-3 ollama[10717]: llama_new_context_with_model: freq_scale = 1
+May 18 22:32:31 dereklin-AB350M-Gaming-3 ollama[10717]: llama_kv_cache_init:      CUDA0 KV buffer size =   768.00 MiB
+May 18 22:32:31 dereklin-AB350M-Gaming-3 ollama[10717]: llama_new_context_with_model: KV self size  =  768.00 MiB, K (f16):  384.00 MiB, V (f16):  384.00 MiB
+May 18 22:32:31 dereklin-AB350M-Gaming-3 ollama[10717]: llama_new_context_with_model:  CUDA_Host  output buffer size =     0.13 MiB
+May 18 22:32:31 dereklin-AB350M-Gaming-3 ollama[10717]: llama_new_context_with_model:      CUDA0 compute buffer size =   156.00 MiB
+May 18 22:32:31 dereklin-AB350M-Gaming-3 ollama[10717]: llama_new_context_with_model:  CUDA_Host compute buffer size =    10.01 MiB
+May 18 22:32:31 dereklin-AB350M-Gaming-3 ollama[10717]: llama_new_context_with_model: graph nodes  = 1030
+May 18 22:32:31 dereklin-AB350M-Gaming-3 ollama[10717]: llama_new_context_with_model: graph splits = 2
+May 18 22:32:32 dereklin-AB350M-Gaming-3 ollama[32504]: INFO [main] model loaded | tid="125878822350848" timestamp=1716042752
+May 18 22:32:32 dereklin-AB350M-Gaming-3 ollama[10717]: time=2024-05-18T22:32:32.420+08:00 level=INFO source=server.go:545 msg="llama runner started in 1.96 seconds"
+May 18 22:32:34 dereklin-AB350M-Gaming-3 ollama[10717]: [GIN] 2024/05/18 - 22:32:34 | 200 |  4.619397869s |       127.0.0.1 | POST     "/api/generate"
+May 18 22:53:37 dereklin-AB350M-Gaming-3 ollama[10717]: [GIN] 2024/05/18 - 22:53:37 | 404 |      89.391µs |       127.0.0.1 | POST     "/api/generate"
+May 18 22:53:48 dereklin-AB350M-Gaming-3 ollama[10717]: time=2024-05-18T22:53:48.333+08:00 level=INFO source=memory.go:133 msg="offload to gpu" layers.requested=-1 layers.real=33 memory.available="14.6 GiB" memory.required.full="3.5 GiB" memory.required.partial="3.5 GiB" memory.required.kv="768.0 MiB" memory.weights.total="2.1 GiB" memory.weights.repeating="2.0 GiB" memory.weights.nonrepeating="77.1 MiB" memory.graph.full="156.0 MiB" memory.graph.partial="175.1 MiB"
+May 18 22:53:48 dereklin-AB350M-Gaming-3 ollama[10717]: time=2024-05-18T22:53:48.333+08:00 level=INFO source=memory.go:133 msg="offload to gpu" layers.requested=-1 layers.real=33 memory.available="14.6 GiB" memory.required.full="3.5 GiB" memory.required.partial="3.5 GiB" memory.required.kv="768.0 MiB" memory.weights.total="2.1 GiB" memory.weights.repeating="2.0 GiB" memory.weights.nonrepeating="77.1 MiB" memory.graph.full="156.0 MiB" memory.graph.partial="175.1 MiB"
+May 18 22:53:48 dereklin-AB350M-Gaming-3 ollama[10717]: time=2024-05-18T22:53:48.333+08:00 level=INFO source=server.go:320 msg="starting llama server" cmd="/tmp/ollama2108205731/runners/cuda_v11/ollama_llama_server --model /usr/share/ollama/.ollama/models/blobs/sha256-4fed7364ee3e0c7cb4fe0880148bfdfcd1b630981efa0802a6b62ee52e7da97e --ctx-size 2048 --batch-size 512 --embedding --log-disable --n-gpu-layers 33 --parallel 1 --port 44135"
+May 18 22:53:48 dereklin-AB350M-Gaming-3 ollama[10717]: time=2024-05-18T22:53:48.334+08:00 level=INFO source=sched.go:338 msg="loaded runners" count=1
+May 18 22:53:48 dereklin-AB350M-Gaming-3 ollama[10717]: time=2024-05-18T22:53:48.334+08:00 level=INFO source=server.go:504 msg="waiting for llama runner to start responding"
+May 18 22:53:48 dereklin-AB350M-Gaming-3 ollama[10717]: time=2024-05-18T22:53:48.334+08:00 level=INFO source=server.go:540 msg="waiting for server to become available" status="llm server error"
+May 18 22:53:48 dereklin-AB350M-Gaming-3 ollama[33941]: INFO [main] build info | build=1 commit="952d03d" tid="124105369899008" timestamp=1716044028
+May 18 22:53:48 dereklin-AB350M-Gaming-3 ollama[33941]: INFO [main] system info | n_threads=6 n_threads_batch=-1 system_info="AVX = 1 | AVX_VNNI = 0 | AVX2 = 0 | AVX512 = 0 | AVX512_VBMI = 0 | AVX512_VNNI = 0 | FMA = 0 | NEON = 0 | ARM_FMA = 0 | F16C = 0 | FP16_VA = 0 | WASM_SIMD = 0 | BLAS = 1 | SSE3 = 1 | SSSE3 = 1 | VSX = 0 | MATMUL_INT8 = 0 | LLAMAFILE = 1 | " tid="124105369899008" timestamp=1716044028 total_threads=12
+May 18 22:53:48 dereklin-AB350M-Gaming-3 ollama[33941]: INFO [main] HTTP server listening | hostname="127.0.0.1" n_threads_http="11" port="44135" tid="124105369899008" timestamp=1716044028
+May 18 22:53:48 dereklin-AB350M-Gaming-3 ollama[10717]: llama_model_loader: loaded meta data with 25 key-value pairs and 291 tensors from /usr/share/ollama/.ollama/models/blobs/sha256-4fed7364ee3e0c7cb4fe0880148bfdfcd1b630981efa0802a6b62ee52e7da97e (version GGUF V3 (latest))
+May 18 22:53:48 dereklin-AB350M-Gaming-3 ollama[10717]: llama_model_loader: Dumping metadata keys/values. Note: KV overrides do not apply in this output.
+May 18 22:53:48 dereklin-AB350M-Gaming-3 ollama[10717]: llama_model_loader: - kv   0:                       general.architecture str              = llama
+May 18 22:53:48 dereklin-AB350M-Gaming-3 ollama[10717]: llama_model_loader: - kv   1:                               general.name str              = LLaMA v2
+May 18 22:53:48 dereklin-AB350M-Gaming-3 ollama[10717]: llama_model_loader: - kv   2:                           llama.vocab_size u32              = 32064
+May 18 22:53:48 dereklin-AB350M-Gaming-3 ollama[10717]: llama_model_loader: - kv   3:                       llama.context_length u32              = 4096
+May 18 22:53:48 dereklin-AB350M-Gaming-3 ollama[10717]: llama_model_loader: - kv   4:                     llama.embedding_length u32              = 3072
+May 18 22:53:48 dereklin-AB350M-Gaming-3 ollama[10717]: llama_model_loader: - kv   5:                          llama.block_count u32              = 32
+May 18 22:53:48 dereklin-AB350M-Gaming-3 ollama[10717]: llama_model_loader: - kv   6:                  llama.feed_forward_length u32              = 8192
+May 18 22:53:48 dereklin-AB350M-Gaming-3 ollama[10717]: llama_model_loader: - kv   7:                 llama.rope.dimension_count u32              = 96
+May 18 22:53:48 dereklin-AB350M-Gaming-3 ollama[10717]: llama_model_loader: - kv   8:                 llama.attention.head_count u32              = 32
+May 18 22:53:48 dereklin-AB350M-Gaming-3 ollama[10717]: llama_model_loader: - kv   9:              llama.attention.head_count_kv u32              = 32
+May 18 22:53:48 dereklin-AB350M-Gaming-3 ollama[10717]: llama_model_loader: - kv  10:     llama.attention.layer_norm_rms_epsilon f32              = 0.000010
+May 18 22:53:48 dereklin-AB350M-Gaming-3 ollama[10717]: llama_model_loader: - kv  11:                       llama.rope.freq_base f32              = 10000.000000
+May 18 22:53:48 dereklin-AB350M-Gaming-3 ollama[10717]: llama_model_loader: - kv  12:                          general.file_type u32              = 15
+May 18 22:53:48 dereklin-AB350M-Gaming-3 ollama[10717]: llama_model_loader: - kv  13:                       tokenizer.ggml.model str              = llama
+May 18 22:53:48 dereklin-AB350M-Gaming-3 ollama[10717]: llama_model_loader: - kv  14:                      tokenizer.ggml.tokens arr[str,32064]   = ["<unk>", "<s>", "</s>", "<0x00>", "<...
+May 18 22:53:48 dereklin-AB350M-Gaming-3 ollama[10717]: llama_model_loader: - kv  15:                      tokenizer.ggml.scores arr[f32,32064]   = [0.000000, 0.000000, 0.000000, 0.0000...
+May 18 22:53:48 dereklin-AB350M-Gaming-3 ollama[10717]: llama_model_loader: - kv  16:                  tokenizer.ggml.token_type arr[i32,32064]   = [2, 3, 3, 6, 6, 6, 6, 6, 6, 6, 6, 6, ...
+May 18 22:53:48 dereklin-AB350M-Gaming-3 ollama[10717]: llama_model_loader: - kv  17:                tokenizer.ggml.bos_token_id u32              = 1
+May 18 22:53:48 dereklin-AB350M-Gaming-3 ollama[10717]: llama_model_loader: - kv  18:                tokenizer.ggml.eos_token_id u32              = 32000
+May 18 22:53:48 dereklin-AB350M-Gaming-3 ollama[10717]: llama_model_loader: - kv  19:            tokenizer.ggml.unknown_token_id u32              = 0
+May 18 22:53:48 dereklin-AB350M-Gaming-3 ollama[10717]: llama_model_loader: - kv  20:            tokenizer.ggml.padding_token_id u32              = 32000
+May 18 22:53:48 dereklin-AB350M-Gaming-3 ollama[10717]: llama_model_loader: - kv  21:               tokenizer.ggml.add_bos_token bool             = true
+May 18 22:53:48 dereklin-AB350M-Gaming-3 ollama[10717]: llama_model_loader: - kv  22:               tokenizer.ggml.add_eos_token bool             = false
+May 18 22:53:48 dereklin-AB350M-Gaming-3 ollama[10717]: llama_model_loader: - kv  23:                    tokenizer.chat_template str              = {{ bos_token }}{% for message in mess...
+May 18 22:53:48 dereklin-AB350M-Gaming-3 ollama[10717]: llama_model_loader: - kv  24:               general.quantization_version u32              = 2
+May 18 22:53:48 dereklin-AB350M-Gaming-3 ollama[10717]: llama_model_loader: - type  f32:   65 tensors
+May 18 22:53:48 dereklin-AB350M-Gaming-3 ollama[10717]: llama_model_loader: - type q4_K:  193 tensors
+May 18 22:53:48 dereklin-AB350M-Gaming-3 ollama[10717]: llama_model_loader: - type q6_K:   33 tensors
+May 18 22:53:48 dereklin-AB350M-Gaming-3 ollama[10717]: llm_load_vocab: special tokens definition check successful ( 323/32064 ).
+May 18 22:53:48 dereklin-AB350M-Gaming-3 ollama[10717]: llm_load_print_meta: format           = GGUF V3 (latest)
+May 18 22:53:48 dereklin-AB350M-Gaming-3 ollama[10717]: llm_load_print_meta: arch             = llama
+May 18 22:53:48 dereklin-AB350M-Gaming-3 ollama[10717]: llm_load_print_meta: vocab type       = SPM
+May 18 22:53:48 dereklin-AB350M-Gaming-3 ollama[10717]: llm_load_print_meta: n_vocab          = 32064
+May 18 22:53:48 dereklin-AB350M-Gaming-3 ollama[10717]: llm_load_print_meta: n_merges         = 0
+May 18 22:53:48 dereklin-AB350M-Gaming-3 ollama[10717]: llm_load_print_meta: n_ctx_train      = 4096
+May 18 22:53:48 dereklin-AB350M-Gaming-3 ollama[10717]: llm_load_print_meta: n_embd           = 3072
+May 18 22:53:48 dereklin-AB350M-Gaming-3 ollama[10717]: llm_load_print_meta: n_head           = 32
+May 18 22:53:48 dereklin-AB350M-Gaming-3 ollama[10717]: llm_load_print_meta: n_head_kv        = 32
+May 18 22:53:48 dereklin-AB350M-Gaming-3 ollama[10717]: llm_load_print_meta: n_layer          = 32
+May 18 22:53:48 dereklin-AB350M-Gaming-3 ollama[10717]: llm_load_print_meta: n_rot            = 96
+May 18 22:53:48 dereklin-AB350M-Gaming-3 ollama[10717]: llm_load_print_meta: n_embd_head_k    = 96
+May 18 22:53:48 dereklin-AB350M-Gaming-3 ollama[10717]: llm_load_print_meta: n_embd_head_v    = 96
+May 18 22:53:48 dereklin-AB350M-Gaming-3 ollama[10717]: llm_load_print_meta: n_gqa            = 1
+May 18 22:53:48 dereklin-AB350M-Gaming-3 ollama[10717]: llm_load_print_meta: n_embd_k_gqa     = 3072
+May 18 22:53:48 dereklin-AB350M-Gaming-3 ollama[10717]: llm_load_print_meta: n_embd_v_gqa     = 3072
+May 18 22:53:48 dereklin-AB350M-Gaming-3 ollama[10717]: llm_load_print_meta: f_norm_eps       = 0.0e+00
+May 18 22:53:48 dereklin-AB350M-Gaming-3 ollama[10717]: llm_load_print_meta: f_norm_rms_eps   = 1.0e-05
+May 18 22:53:48 dereklin-AB350M-Gaming-3 ollama[10717]: llm_load_print_meta: f_clamp_kqv      = 0.0e+00
+May 18 22:53:48 dereklin-AB350M-Gaming-3 ollama[10717]: llm_load_print_meta: f_max_alibi_bias = 0.0e+00
+May 18 22:53:48 dereklin-AB350M-Gaming-3 ollama[10717]: llm_load_print_meta: f_logit_scale    = 0.0e+00
+May 18 22:53:48 dereklin-AB350M-Gaming-3 ollama[10717]: llm_load_print_meta: n_ff             = 8192
+May 18 22:53:48 dereklin-AB350M-Gaming-3 ollama[10717]: llm_load_print_meta: n_expert         = 0
+May 18 22:53:48 dereklin-AB350M-Gaming-3 ollama[10717]: llm_load_print_meta: n_expert_used    = 0
+May 18 22:53:48 dereklin-AB350M-Gaming-3 ollama[10717]: llm_load_print_meta: causal attn      = 1
+May 18 22:53:48 dereklin-AB350M-Gaming-3 ollama[10717]: llm_load_print_meta: pooling type     = 0
+May 18 22:53:48 dereklin-AB350M-Gaming-3 ollama[10717]: llm_load_print_meta: rope type        = 0
+May 18 22:53:48 dereklin-AB350M-Gaming-3 ollama[10717]: llm_load_print_meta: rope scaling     = linear
+May 18 22:53:48 dereklin-AB350M-Gaming-3 ollama[10717]: llm_load_print_meta: freq_base_train  = 10000.0
+May 18 22:53:48 dereklin-AB350M-Gaming-3 ollama[10717]: llm_load_print_meta: freq_scale_train = 1
+May 18 22:53:48 dereklin-AB350M-Gaming-3 ollama[10717]: llm_load_print_meta: n_yarn_orig_ctx  = 4096
+May 18 22:53:48 dereklin-AB350M-Gaming-3 ollama[10717]: llm_load_print_meta: rope_finetuned   = unknown
+May 18 22:53:48 dereklin-AB350M-Gaming-3 ollama[10717]: llm_load_print_meta: ssm_d_conv       = 0
+May 18 22:53:48 dereklin-AB350M-Gaming-3 ollama[10717]: llm_load_print_meta: ssm_d_inner      = 0
+May 18 22:53:48 dereklin-AB350M-Gaming-3 ollama[10717]: llm_load_print_meta: ssm_d_state      = 0
+May 18 22:53:48 dereklin-AB350M-Gaming-3 ollama[10717]: llm_load_print_meta: ssm_dt_rank      = 0
+May 18 22:53:48 dereklin-AB350M-Gaming-3 ollama[10717]: llm_load_print_meta: model type       = 7B
+May 18 22:53:48 dereklin-AB350M-Gaming-3 ollama[10717]: llm_load_print_meta: model ftype      = Q4_K - Medium
+May 18 22:53:48 dereklin-AB350M-Gaming-3 ollama[10717]: llm_load_print_meta: model params     = 3.82 B
+May 18 22:53:48 dereklin-AB350M-Gaming-3 ollama[10717]: llm_load_print_meta: model size       = 2.16 GiB (4.85 BPW)
+May 18 22:53:48 dereklin-AB350M-Gaming-3 ollama[10717]: llm_load_print_meta: general.name     = LLaMA v2
+May 18 22:53:48 dereklin-AB350M-Gaming-3 ollama[10717]: llm_load_print_meta: BOS token        = 1 '<s>'
+May 18 22:53:48 dereklin-AB350M-Gaming-3 ollama[10717]: llm_load_print_meta: EOS token        = 32000 '<|endoftext|>'
+May 18 22:53:48 dereklin-AB350M-Gaming-3 ollama[10717]: llm_load_print_meta: UNK token        = 0 '<unk>'
+May 18 22:53:48 dereklin-AB350M-Gaming-3 ollama[10717]: llm_load_print_meta: PAD token        = 32000 '<|endoftext|>'
+May 18 22:53:48 dereklin-AB350M-Gaming-3 ollama[10717]: llm_load_print_meta: LF token         = 13 '<0x0A>'
+May 18 22:53:48 dereklin-AB350M-Gaming-3 ollama[10717]: llm_load_print_meta: EOT token        = 32007 '<|end|>'
+May 18 22:53:48 dereklin-AB350M-Gaming-3 ollama[10717]: ggml_cuda_init: GGML_CUDA_FORCE_MMQ:   yes
+May 18 22:53:48 dereklin-AB350M-Gaming-3 ollama[10717]: ggml_cuda_init: CUDA_USE_TENSOR_CORES: no
+May 18 22:53:48 dereklin-AB350M-Gaming-3 ollama[10717]: ggml_cuda_init: found 1 CUDA devices:
+May 18 22:53:48 dereklin-AB350M-Gaming-3 ollama[10717]:   Device 0: NVIDIA GeForce RTX 4070 Ti SUPER, compute capability 8.9, VMM: yes
+May 18 22:53:48 dereklin-AB350M-Gaming-3 ollama[10717]: llm_load_tensors: ggml ctx size =    0.30 MiB
+May 18 22:53:48 dereklin-AB350M-Gaming-3 ollama[10717]: time=2024-05-18T22:53:48.785+08:00 level=INFO source=server.go:540 msg="waiting for server to become available" status="llm server not responding"
+May 18 22:53:48 dereklin-AB350M-Gaming-3 ollama[10717]: llm_load_tensors: offloading 32 repeating layers to GPU
+May 18 22:53:48 dereklin-AB350M-Gaming-3 ollama[10717]: llm_load_tensors: offloading non-repeating layers to GPU
+May 18 22:53:48 dereklin-AB350M-Gaming-3 ollama[10717]: llm_load_tensors: offloaded 33/33 layers to GPU
+May 18 22:53:48 dereklin-AB350M-Gaming-3 ollama[10717]: llm_load_tensors:        CPU buffer size =    52.84 MiB
+May 18 22:53:48 dereklin-AB350M-Gaming-3 ollama[10717]: llm_load_tensors:      CUDA0 buffer size =  2157.94 MiB
+May 18 22:53:49 dereklin-AB350M-Gaming-3 ollama[10717]: .................................................................................................
+May 18 22:53:49 dereklin-AB350M-Gaming-3 ollama[10717]: time=2024-05-18T22:53:49.152+08:00 level=INFO source=server.go:540 msg="waiting for server to become available" status="llm server loading model"
+May 18 22:53:49 dereklin-AB350M-Gaming-3 ollama[10717]: llama_new_context_with_model: n_ctx      = 2048
+May 18 22:53:49 dereklin-AB350M-Gaming-3 ollama[10717]: llama_new_context_with_model: n_batch    = 512
+May 18 22:53:49 dereklin-AB350M-Gaming-3 ollama[10717]: llama_new_context_with_model: n_ubatch   = 512
+May 18 22:53:49 dereklin-AB350M-Gaming-3 ollama[10717]: llama_new_context_with_model: freq_base  = 10000.0
+May 18 22:53:49 dereklin-AB350M-Gaming-3 ollama[10717]: llama_new_context_with_model: freq_scale = 1
+May 18 22:53:49 dereklin-AB350M-Gaming-3 ollama[10717]: llama_kv_cache_init:      CUDA0 KV buffer size =   768.00 MiB
+May 18 22:53:49 dereklin-AB350M-Gaming-3 ollama[10717]: llama_new_context_with_model: KV self size  =  768.00 MiB, K (f16):  384.00 MiB, V (f16):  384.00 MiB
+May 18 22:53:49 dereklin-AB350M-Gaming-3 ollama[10717]: llama_new_context_with_model:  CUDA_Host  output buffer size =     0.13 MiB
+May 18 22:53:49 dereklin-AB350M-Gaming-3 ollama[10717]: llama_new_context_with_model:      CUDA0 compute buffer size =   156.00 MiB
+May 18 22:53:49 dereklin-AB350M-Gaming-3 ollama[10717]: llama_new_context_with_model:  CUDA_Host compute buffer size =    10.01 MiB
+May 18 22:53:49 dereklin-AB350M-Gaming-3 ollama[10717]: llama_new_context_with_model: graph nodes  = 1030
+May 18 22:53:49 dereklin-AB350M-Gaming-3 ollama[10717]: llama_new_context_with_model: graph splits = 2
+May 18 22:53:50 dereklin-AB350M-Gaming-3 ollama[33941]: INFO [main] model loaded | tid="124105369899008" timestamp=1716044030
+May 18 22:53:50 dereklin-AB350M-Gaming-3 ollama[10717]: time=2024-05-18T22:53:50.157+08:00 level=INFO source=server.go:545 msg="llama runner started in 1.82 seconds"
+May 18 22:53:51 dereklin-AB350M-Gaming-3 ollama[10717]: [GIN] 2024/05/18 - 22:53:51 | 200 |  3.870057869s |       127.0.0.1 | POST     "/api/generate"
+May 19 14:13:23 dereklin-AB350M-Gaming-3 ollama[10717]: time=2024-05-19T14:13:23.449+08:00 level=INFO source=memory.go:133 msg="offload to gpu" layers.requested=-1 layers.real=33 memory.available="14.7 GiB" memory.required.full="3.5 GiB" memory.required.partial="3.5 GiB" memory.required.kv="768.0 MiB" memory.weights.total="2.1 GiB" memory.weights.repeating="2.0 GiB" memory.weights.nonrepeating="77.1 MiB" memory.graph.full="156.0 MiB" memory.graph.partial="175.1 MiB"
+May 19 14:13:23 dereklin-AB350M-Gaming-3 ollama[10717]: time=2024-05-19T14:13:23.450+08:00 level=INFO source=memory.go:133 msg="offload to gpu" layers.requested=-1 layers.real=33 memory.available="14.7 GiB" memory.required.full="3.5 GiB" memory.required.partial="3.5 GiB" memory.required.kv="768.0 MiB" memory.weights.total="2.1 GiB" memory.weights.repeating="2.0 GiB" memory.weights.nonrepeating="77.1 MiB" memory.graph.full="156.0 MiB" memory.graph.partial="175.1 MiB"
+May 19 14:13:23 dereklin-AB350M-Gaming-3 ollama[10717]: time=2024-05-19T14:13:23.450+08:00 level=INFO source=server.go:320 msg="starting llama server" cmd="/tmp/ollama2108205731/runners/cuda_v11/ollama_llama_server --model /usr/share/ollama/.ollama/models/blobs/sha256-4fed7364ee3e0c7cb4fe0880148bfdfcd1b630981efa0802a6b62ee52e7da97e --ctx-size 2048 --batch-size 512 --embedding --log-disable --n-gpu-layers 33 --parallel 1 --port 44677"
+May 19 14:13:23 dereklin-AB350M-Gaming-3 ollama[10717]: time=2024-05-19T14:13:23.450+08:00 level=INFO source=sched.go:338 msg="loaded runners" count=1
+May 19 14:13:23 dereklin-AB350M-Gaming-3 ollama[10717]: time=2024-05-19T14:13:23.450+08:00 level=INFO source=server.go:504 msg="waiting for llama runner to start responding"
+May 19 14:13:23 dereklin-AB350M-Gaming-3 ollama[10717]: time=2024-05-19T14:13:23.451+08:00 level=INFO source=server.go:540 msg="waiting for server to become available" status="llm server error"
+May 19 14:13:23 dereklin-AB350M-Gaming-3 ollama[118557]: INFO [main] build info | build=1 commit="952d03d" tid="133819444011008" timestamp=1716099203
+May 19 14:13:23 dereklin-AB350M-Gaming-3 ollama[118557]: INFO [main] system info | n_threads=6 n_threads_batch=-1 system_info="AVX = 1 | AVX_VNNI = 0 | AVX2 = 0 | AVX512 = 0 | AVX512_VBMI = 0 | AVX512_VNNI = 0 | FMA = 0 | NEON = 0 | ARM_FMA = 0 | F16C = 0 | FP16_VA = 0 | WASM_SIMD = 0 | BLAS = 1 | SSE3 = 1 | SSSE3 = 1 | VSX = 0 | MATMUL_INT8 = 0 | LLAMAFILE = 1 | " tid="133819444011008" timestamp=1716099203 total_threads=12
+May 19 14:13:23 dereklin-AB350M-Gaming-3 ollama[118557]: INFO [main] HTTP server listening | hostname="127.0.0.1" n_threads_http="11" port="44677" tid="133819444011008" timestamp=1716099203
+May 19 14:13:23 dereklin-AB350M-Gaming-3 ollama[10717]: llama_model_loader: loaded meta data with 25 key-value pairs and 291 tensors from /usr/share/ollama/.ollama/models/blobs/sha256-4fed7364ee3e0c7cb4fe0880148bfdfcd1b630981efa0802a6b62ee52e7da97e (version GGUF V3 (latest))
+May 19 14:13:23 dereklin-AB350M-Gaming-3 ollama[10717]: llama_model_loader: Dumping metadata keys/values. Note: KV overrides do not apply in this output.
+May 19 14:13:23 dereklin-AB350M-Gaming-3 ollama[10717]: llama_model_loader: - kv   0:                       general.architecture str              = llama
+May 19 14:13:23 dereklin-AB350M-Gaming-3 ollama[10717]: llama_model_loader: - kv   1:                               general.name str              = LLaMA v2
+May 19 14:13:23 dereklin-AB350M-Gaming-3 ollama[10717]: llama_model_loader: - kv   2:                           llama.vocab_size u32              = 32064
+May 19 14:13:23 dereklin-AB350M-Gaming-3 ollama[10717]: llama_model_loader: - kv   3:                       llama.context_length u32              = 4096
+May 19 14:13:23 dereklin-AB350M-Gaming-3 ollama[10717]: llama_model_loader: - kv   4:                     llama.embedding_length u32              = 3072
+May 19 14:13:23 dereklin-AB350M-Gaming-3 ollama[10717]: llama_model_loader: - kv   5:                          llama.block_count u32              = 32
+May 19 14:13:23 dereklin-AB350M-Gaming-3 ollama[10717]: llama_model_loader: - kv   6:                  llama.feed_forward_length u32              = 8192
+May 19 14:13:23 dereklin-AB350M-Gaming-3 ollama[10717]: llama_model_loader: - kv   7:                 llama.rope.dimension_count u32              = 96
+May 19 14:13:23 dereklin-AB350M-Gaming-3 ollama[10717]: llama_model_loader: - kv   8:                 llama.attention.head_count u32              = 32
+May 19 14:13:23 dereklin-AB350M-Gaming-3 ollama[10717]: llama_model_loader: - kv   9:              llama.attention.head_count_kv u32              = 32
+May 19 14:13:23 dereklin-AB350M-Gaming-3 ollama[10717]: llama_model_loader: - kv  10:     llama.attention.layer_norm_rms_epsilon f32              = 0.000010
+May 19 14:13:23 dereklin-AB350M-Gaming-3 ollama[10717]: llama_model_loader: - kv  11:                       llama.rope.freq_base f32              = 10000.000000
+May 19 14:13:23 dereklin-AB350M-Gaming-3 ollama[10717]: llama_model_loader: - kv  12:                          general.file_type u32              = 15
+May 19 14:13:23 dereklin-AB350M-Gaming-3 ollama[10717]: llama_model_loader: - kv  13:                       tokenizer.ggml.model str              = llama
+May 19 14:13:23 dereklin-AB350M-Gaming-3 ollama[10717]: llama_model_loader: - kv  14:                      tokenizer.ggml.tokens arr[str,32064]   = ["<unk>", "<s>", "</s>", "<0x00>", "<...
+May 19 14:13:23 dereklin-AB350M-Gaming-3 ollama[10717]: llama_model_loader: - kv  15:                      tokenizer.ggml.scores arr[f32,32064]   = [0.000000, 0.000000, 0.000000, 0.0000...
+May 19 14:13:23 dereklin-AB350M-Gaming-3 ollama[10717]: llama_model_loader: - kv  16:                  tokenizer.ggml.token_type arr[i32,32064]   = [2, 3, 3, 6, 6, 6, 6, 6, 6, 6, 6, 6, ...
+May 19 14:13:23 dereklin-AB350M-Gaming-3 ollama[10717]: llama_model_loader: - kv  17:                tokenizer.ggml.bos_token_id u32              = 1
+May 19 14:13:23 dereklin-AB350M-Gaming-3 ollama[10717]: llama_model_loader: - kv  18:                tokenizer.ggml.eos_token_id u32              = 32000
+May 19 14:13:23 dereklin-AB350M-Gaming-3 ollama[10717]: llama_model_loader: - kv  19:            tokenizer.ggml.unknown_token_id u32              = 0
+May 19 14:13:23 dereklin-AB350M-Gaming-3 ollama[10717]: llama_model_loader: - kv  20:            tokenizer.ggml.padding_token_id u32              = 32000
+May 19 14:13:23 dereklin-AB350M-Gaming-3 ollama[10717]: llama_model_loader: - kv  21:               tokenizer.ggml.add_bos_token bool             = true
+May 19 14:13:23 dereklin-AB350M-Gaming-3 ollama[10717]: llama_model_loader: - kv  22:               tokenizer.ggml.add_eos_token bool             = false
+May 19 14:13:23 dereklin-AB350M-Gaming-3 ollama[10717]: llama_model_loader: - kv  23:                    tokenizer.chat_template str              = {{ bos_token }}{% for message in mess...
+May 19 14:13:23 dereklin-AB350M-Gaming-3 ollama[10717]: llama_model_loader: - kv  24:               general.quantization_version u32              = 2
+May 19 14:13:23 dereklin-AB350M-Gaming-3 ollama[10717]: llama_model_loader: - type  f32:   65 tensors
+May 19 14:13:23 dereklin-AB350M-Gaming-3 ollama[10717]: llama_model_loader: - type q4_K:  193 tensors
+May 19 14:13:23 dereklin-AB350M-Gaming-3 ollama[10717]: llama_model_loader: - type q6_K:   33 tensors
+May 19 14:13:23 dereklin-AB350M-Gaming-3 ollama[10717]: llm_load_vocab: special tokens definition check successful ( 323/32064 ).
+May 19 14:13:23 dereklin-AB350M-Gaming-3 ollama[10717]: llm_load_print_meta: format           = GGUF V3 (latest)
+May 19 14:13:23 dereklin-AB350M-Gaming-3 ollama[10717]: llm_load_print_meta: arch             = llama
+May 19 14:13:23 dereklin-AB350M-Gaming-3 ollama[10717]: llm_load_print_meta: vocab type       = SPM
+May 19 14:13:23 dereklin-AB350M-Gaming-3 ollama[10717]: llm_load_print_meta: n_vocab          = 32064
+May 19 14:13:23 dereklin-AB350M-Gaming-3 ollama[10717]: llm_load_print_meta: n_merges         = 0
+May 19 14:13:23 dereklin-AB350M-Gaming-3 ollama[10717]: llm_load_print_meta: n_ctx_train      = 4096
+May 19 14:13:23 dereklin-AB350M-Gaming-3 ollama[10717]: llm_load_print_meta: n_embd           = 3072
+May 19 14:13:23 dereklin-AB350M-Gaming-3 ollama[10717]: llm_load_print_meta: n_head           = 32
+May 19 14:13:23 dereklin-AB350M-Gaming-3 ollama[10717]: llm_load_print_meta: n_head_kv        = 32
+May 19 14:13:23 dereklin-AB350M-Gaming-3 ollama[10717]: llm_load_print_meta: n_layer          = 32
+May 19 14:13:23 dereklin-AB350M-Gaming-3 ollama[10717]: llm_load_print_meta: n_rot            = 96
+May 19 14:13:23 dereklin-AB350M-Gaming-3 ollama[10717]: llm_load_print_meta: n_embd_head_k    = 96
+May 19 14:13:23 dereklin-AB350M-Gaming-3 ollama[10717]: llm_load_print_meta: n_embd_head_v    = 96
+May 19 14:13:23 dereklin-AB350M-Gaming-3 ollama[10717]: llm_load_print_meta: n_gqa            = 1
+May 19 14:13:23 dereklin-AB350M-Gaming-3 ollama[10717]: llm_load_print_meta: n_embd_k_gqa     = 3072
+May 19 14:13:23 dereklin-AB350M-Gaming-3 ollama[10717]: llm_load_print_meta: n_embd_v_gqa     = 3072
+May 19 14:13:23 dereklin-AB350M-Gaming-3 ollama[10717]: llm_load_print_meta: f_norm_eps       = 0.0e+00
+May 19 14:13:23 dereklin-AB350M-Gaming-3 ollama[10717]: llm_load_print_meta: f_norm_rms_eps   = 1.0e-05
+May 19 14:13:23 dereklin-AB350M-Gaming-3 ollama[10717]: llm_load_print_meta: f_clamp_kqv      = 0.0e+00
+May 19 14:13:23 dereklin-AB350M-Gaming-3 ollama[10717]: llm_load_print_meta: f_max_alibi_bias = 0.0e+00
+May 19 14:13:23 dereklin-AB350M-Gaming-3 ollama[10717]: llm_load_print_meta: f_logit_scale    = 0.0e+00
+May 19 14:13:23 dereklin-AB350M-Gaming-3 ollama[10717]: llm_load_print_meta: n_ff             = 8192
+May 19 14:13:23 dereklin-AB350M-Gaming-3 ollama[10717]: llm_load_print_meta: n_expert         = 0
+May 19 14:13:23 dereklin-AB350M-Gaming-3 ollama[10717]: llm_load_print_meta: n_expert_used    = 0
+May 19 14:13:23 dereklin-AB350M-Gaming-3 ollama[10717]: llm_load_print_meta: causal attn      = 1
+May 19 14:13:23 dereklin-AB350M-Gaming-3 ollama[10717]: llm_load_print_meta: pooling type     = 0
+May 19 14:13:23 dereklin-AB350M-Gaming-3 ollama[10717]: llm_load_print_meta: rope type        = 0
+May 19 14:13:23 dereklin-AB350M-Gaming-3 ollama[10717]: llm_load_print_meta: rope scaling     = linear
+May 19 14:13:23 dereklin-AB350M-Gaming-3 ollama[10717]: llm_load_print_meta: freq_base_train  = 10000.0
+May 19 14:13:23 dereklin-AB350M-Gaming-3 ollama[10717]: llm_load_print_meta: freq_scale_train = 1
+May 19 14:13:23 dereklin-AB350M-Gaming-3 ollama[10717]: llm_load_print_meta: n_yarn_orig_ctx  = 4096
+May 19 14:13:23 dereklin-AB350M-Gaming-3 ollama[10717]: llm_load_print_meta: rope_finetuned   = unknown
+May 19 14:13:23 dereklin-AB350M-Gaming-3 ollama[10717]: llm_load_print_meta: ssm_d_conv       = 0
+May 19 14:13:23 dereklin-AB350M-Gaming-3 ollama[10717]: llm_load_print_meta: ssm_d_inner      = 0
+May 19 14:13:23 dereklin-AB350M-Gaming-3 ollama[10717]: llm_load_print_meta: ssm_d_state      = 0
+May 19 14:13:23 dereklin-AB350M-Gaming-3 ollama[10717]: llm_load_print_meta: ssm_dt_rank      = 0
+May 19 14:13:23 dereklin-AB350M-Gaming-3 ollama[10717]: llm_load_print_meta: model type       = 7B
+May 19 14:13:23 dereklin-AB350M-Gaming-3 ollama[10717]: llm_load_print_meta: model ftype      = Q4_K - Medium
+May 19 14:13:23 dereklin-AB350M-Gaming-3 ollama[10717]: llm_load_print_meta: model params     = 3.82 B
+May 19 14:13:23 dereklin-AB350M-Gaming-3 ollama[10717]: llm_load_print_meta: model size       = 2.16 GiB (4.85 BPW)
+May 19 14:13:23 dereklin-AB350M-Gaming-3 ollama[10717]: llm_load_print_meta: general.name     = LLaMA v2
+May 19 14:13:23 dereklin-AB350M-Gaming-3 ollama[10717]: llm_load_print_meta: BOS token        = 1 '<s>'
+May 19 14:13:23 dereklin-AB350M-Gaming-3 ollama[10717]: llm_load_print_meta: EOS token        = 32000 '<|endoftext|>'
+May 19 14:13:23 dereklin-AB350M-Gaming-3 ollama[10717]: llm_load_print_meta: UNK token        = 0 '<unk>'
+May 19 14:13:23 dereklin-AB350M-Gaming-3 ollama[10717]: llm_load_print_meta: PAD token        = 32000 '<|endoftext|>'
+May 19 14:13:23 dereklin-AB350M-Gaming-3 ollama[10717]: llm_load_print_meta: LF token         = 13 '<0x0A>'
+May 19 14:13:23 dereklin-AB350M-Gaming-3 ollama[10717]: llm_load_print_meta: EOT token        = 32007 '<|end|>'
+May 19 14:13:23 dereklin-AB350M-Gaming-3 ollama[10717]: ggml_cuda_init: GGML_CUDA_FORCE_MMQ:   yes
+May 19 14:13:23 dereklin-AB350M-Gaming-3 ollama[10717]: ggml_cuda_init: CUDA_USE_TENSOR_CORES: no
+May 19 14:13:23 dereklin-AB350M-Gaming-3 ollama[10717]: ggml_cuda_init: found 1 CUDA devices:
+May 19 14:13:23 dereklin-AB350M-Gaming-3 ollama[10717]:   Device 0: NVIDIA GeForce RTX 4070 Ti SUPER, compute capability 8.9, VMM: yes
+May 19 14:13:23 dereklin-AB350M-Gaming-3 ollama[10717]: llm_load_tensors: ggml ctx size =    0.30 MiB
+May 19 14:13:23 dereklin-AB350M-Gaming-3 ollama[10717]: time=2024-05-19T14:13:23.896+08:00 level=INFO source=server.go:540 msg="waiting for server to become available" status="llm server loading model"
+May 19 14:13:23 dereklin-AB350M-Gaming-3 ollama[10717]: llm_load_tensors: offloading 32 repeating layers to GPU
+May 19 14:13:23 dereklin-AB350M-Gaming-3 ollama[10717]: llm_load_tensors: offloading non-repeating layers to GPU
+May 19 14:13:23 dereklin-AB350M-Gaming-3 ollama[10717]: llm_load_tensors: offloaded 33/33 layers to GPU
+May 19 14:13:23 dereklin-AB350M-Gaming-3 ollama[10717]: llm_load_tensors:        CPU buffer size =    52.84 MiB
+May 19 14:13:23 dereklin-AB350M-Gaming-3 ollama[10717]: llm_load_tensors:      CUDA0 buffer size =  2157.94 MiB
+May 19 14:13:24 dereklin-AB350M-Gaming-3 ollama[10717]: .................................................................................................
+May 19 14:13:24 dereklin-AB350M-Gaming-3 ollama[10717]: llama_new_context_with_model: n_ctx      = 2048
+May 19 14:13:24 dereklin-AB350M-Gaming-3 ollama[10717]: llama_new_context_with_model: n_batch    = 512
+May 19 14:13:24 dereklin-AB350M-Gaming-3 ollama[10717]: llama_new_context_with_model: n_ubatch   = 512
+May 19 14:13:24 dereklin-AB350M-Gaming-3 ollama[10717]: llama_new_context_with_model: freq_base  = 10000.0
+May 19 14:13:24 dereklin-AB350M-Gaming-3 ollama[10717]: llama_new_context_with_model: freq_scale = 1
+May 19 14:13:24 dereklin-AB350M-Gaming-3 ollama[10717]: llama_kv_cache_init:      CUDA0 KV buffer size =   768.00 MiB
+May 19 14:13:24 dereklin-AB350M-Gaming-3 ollama[10717]: llama_new_context_with_model: KV self size  =  768.00 MiB, K (f16):  384.00 MiB, V (f16):  384.00 MiB
+May 19 14:13:24 dereklin-AB350M-Gaming-3 ollama[10717]: llama_new_context_with_model:  CUDA_Host  output buffer size =     0.13 MiB
+May 19 14:13:24 dereklin-AB350M-Gaming-3 ollama[10717]: llama_new_context_with_model:      CUDA0 compute buffer size =   156.00 MiB
+May 19 14:13:24 dereklin-AB350M-Gaming-3 ollama[10717]: llama_new_context_with_model:  CUDA_Host compute buffer size =    10.01 MiB
+May 19 14:13:24 dereklin-AB350M-Gaming-3 ollama[10717]: llama_new_context_with_model: graph nodes  = 1030
+May 19 14:13:24 dereklin-AB350M-Gaming-3 ollama[10717]: llama_new_context_with_model: graph splits = 2
+May 19 14:13:25 dereklin-AB350M-Gaming-3 ollama[118557]: INFO [main] model loaded | tid="133819444011008" timestamp=1716099205
+May 19 14:13:25 dereklin-AB350M-Gaming-3 ollama[10717]: time=2024-05-19T14:13:25.404+08:00 level=INFO source=server.go:545 msg="llama runner started in 1.95 seconds"
+May 19 14:13:26 dereklin-AB350M-Gaming-3 ollama[10717]: [GIN] 2024/05/19 - 14:13:26 | 200 |  3.963349007s |       127.0.0.1 | POST     "/api/generate"
+May 19 14:34:32 dereklin-AB350M-Gaming-3 ollama[10717]: [GIN] 2024/05/19 - 14:34:32 | 200 |      24.637µs |       127.0.0.1 | HEAD     "/"
+May 19 14:34:32 dereklin-AB350M-Gaming-3 ollama[10717]: [GIN] 2024/05/19 - 14:34:32 | 200 |     461.089µs |       127.0.0.1 | POST     "/api/show"
+May 19 14:34:32 dereklin-AB350M-Gaming-3 ollama[10717]: [GIN] 2024/05/19 - 14:34:32 | 200 |    1.106807ms |       127.0.0.1 | POST     "/api/show"
+May 19 14:34:33 dereklin-AB350M-Gaming-3 ollama[10717]: time=2024-05-19T14:34:33.130+08:00 level=INFO source=memory.go:133 msg="offload to gpu" layers.requested=-1 layers.real=33 memory.available="14.6 GiB" memory.required.full="3.5 GiB" memory.required.partial="3.5 GiB" memory.required.kv="768.0 MiB" memory.weights.total="2.1 GiB" memory.weights.repeating="2.0 GiB" memory.weights.nonrepeating="77.1 MiB" memory.graph.full="156.0 MiB" memory.graph.partial="175.1 MiB"
+May 19 14:34:33 dereklin-AB350M-Gaming-3 ollama[10717]: time=2024-05-19T14:34:33.131+08:00 level=INFO source=memory.go:133 msg="offload to gpu" layers.requested=-1 layers.real=33 memory.available="14.6 GiB" memory.required.full="3.5 GiB" memory.required.partial="3.5 GiB" memory.required.kv="768.0 MiB" memory.weights.total="2.1 GiB" memory.weights.repeating="2.0 GiB" memory.weights.nonrepeating="77.1 MiB" memory.graph.full="156.0 MiB" memory.graph.partial="175.1 MiB"
+May 19 14:34:33 dereklin-AB350M-Gaming-3 ollama[10717]: time=2024-05-19T14:34:33.132+08:00 level=INFO source=server.go:320 msg="starting llama server" cmd="/tmp/ollama2108205731/runners/cuda_v11/ollama_llama_server --model /usr/share/ollama/.ollama/models/blobs/sha256-4fed7364ee3e0c7cb4fe0880148bfdfcd1b630981efa0802a6b62ee52e7da97e --ctx-size 2048 --batch-size 512 --embedding --log-disable --n-gpu-layers 33 --parallel 1 --port 44811"
+May 19 14:34:33 dereklin-AB350M-Gaming-3 ollama[10717]: time=2024-05-19T14:34:33.132+08:00 level=INFO source=sched.go:338 msg="loaded runners" count=1
+May 19 14:34:33 dereklin-AB350M-Gaming-3 ollama[10717]: time=2024-05-19T14:34:33.132+08:00 level=INFO source=server.go:504 msg="waiting for llama runner to start responding"
+May 19 14:34:33 dereklin-AB350M-Gaming-3 ollama[10717]: time=2024-05-19T14:34:33.133+08:00 level=INFO source=server.go:540 msg="waiting for server to become available" status="llm server error"
+May 19 14:34:33 dereklin-AB350M-Gaming-3 ollama[123803]: INFO [main] build info | build=1 commit="952d03d" tid="138075424772096" timestamp=1716100473
+May 19 14:34:33 dereklin-AB350M-Gaming-3 ollama[123803]: INFO [main] system info | n_threads=6 n_threads_batch=-1 system_info="AVX = 1 | AVX_VNNI = 0 | AVX2 = 0 | AVX512 = 0 | AVX512_VBMI = 0 | AVX512_VNNI = 0 | FMA = 0 | NEON = 0 | ARM_FMA = 0 | F16C = 0 | FP16_VA = 0 | WASM_SIMD = 0 | BLAS = 1 | SSE3 = 1 | SSSE3 = 1 | VSX = 0 | MATMUL_INT8 = 0 | LLAMAFILE = 1 | " tid="138075424772096" timestamp=1716100473 total_threads=12
+May 19 14:34:33 dereklin-AB350M-Gaming-3 ollama[123803]: INFO [main] HTTP server listening | hostname="127.0.0.1" n_threads_http="11" port="44811" tid="138075424772096" timestamp=1716100473
+May 19 14:34:33 dereklin-AB350M-Gaming-3 ollama[10717]: llama_model_loader: loaded meta data with 25 key-value pairs and 291 tensors from /usr/share/ollama/.ollama/models/blobs/sha256-4fed7364ee3e0c7cb4fe0880148bfdfcd1b630981efa0802a6b62ee52e7da97e (version GGUF V3 (latest))
+May 19 14:34:33 dereklin-AB350M-Gaming-3 ollama[10717]: llama_model_loader: Dumping metadata keys/values. Note: KV overrides do not apply in this output.
+May 19 14:34:33 dereklin-AB350M-Gaming-3 ollama[10717]: llama_model_loader: - kv   0:                       general.architecture str              = llama
+May 19 14:34:33 dereklin-AB350M-Gaming-3 ollama[10717]: llama_model_loader: - kv   1:                               general.name str              = LLaMA v2
+May 19 14:34:33 dereklin-AB350M-Gaming-3 ollama[10717]: llama_model_loader: - kv   2:                           llama.vocab_size u32              = 32064
+May 19 14:34:33 dereklin-AB350M-Gaming-3 ollama[10717]: llama_model_loader: - kv   3:                       llama.context_length u32              = 4096
+May 19 14:34:33 dereklin-AB350M-Gaming-3 ollama[10717]: llama_model_loader: - kv   4:                     llama.embedding_length u32              = 3072
+May 19 14:34:33 dereklin-AB350M-Gaming-3 ollama[10717]: llama_model_loader: - kv   5:                          llama.block_count u32              = 32
+May 19 14:34:33 dereklin-AB350M-Gaming-3 ollama[10717]: llama_model_loader: - kv   6:                  llama.feed_forward_length u32              = 8192
+May 19 14:34:33 dereklin-AB350M-Gaming-3 ollama[10717]: llama_model_loader: - kv   7:                 llama.rope.dimension_count u32              = 96
+May 19 14:34:33 dereklin-AB350M-Gaming-3 ollama[10717]: llama_model_loader: - kv   8:                 llama.attention.head_count u32              = 32
+May 19 14:34:33 dereklin-AB350M-Gaming-3 ollama[10717]: llama_model_loader: - kv   9:              llama.attention.head_count_kv u32              = 32
+May 19 14:34:33 dereklin-AB350M-Gaming-3 ollama[10717]: llama_model_loader: - kv  10:     llama.attention.layer_norm_rms_epsilon f32              = 0.000010
+May 19 14:34:33 dereklin-AB350M-Gaming-3 ollama[10717]: llama_model_loader: - kv  11:                       llama.rope.freq_base f32              = 10000.000000
+May 19 14:34:33 dereklin-AB350M-Gaming-3 ollama[10717]: llama_model_loader: - kv  12:                          general.file_type u32              = 15
+May 19 14:34:33 dereklin-AB350M-Gaming-3 ollama[10717]: llama_model_loader: - kv  13:                       tokenizer.ggml.model str              = llama
+May 19 14:34:33 dereklin-AB350M-Gaming-3 ollama[10717]: llama_model_loader: - kv  14:                      tokenizer.ggml.tokens arr[str,32064]   = ["<unk>", "<s>", "</s>", "<0x00>", "<...
+May 19 14:34:33 dereklin-AB350M-Gaming-3 ollama[10717]: llama_model_loader: - kv  15:                      tokenizer.ggml.scores arr[f32,32064]   = [0.000000, 0.000000, 0.000000, 0.0000...
+May 19 14:34:33 dereklin-AB350M-Gaming-3 ollama[10717]: llama_model_loader: - kv  16:                  tokenizer.ggml.token_type arr[i32,32064]   = [2, 3, 3, 6, 6, 6, 6, 6, 6, 6, 6, 6, ...
+May 19 14:34:33 dereklin-AB350M-Gaming-3 ollama[10717]: llama_model_loader: - kv  17:                tokenizer.ggml.bos_token_id u32              = 1
+May 19 14:34:33 dereklin-AB350M-Gaming-3 ollama[10717]: llama_model_loader: - kv  18:                tokenizer.ggml.eos_token_id u32              = 32000
+May 19 14:34:33 dereklin-AB350M-Gaming-3 ollama[10717]: llama_model_loader: - kv  19:            tokenizer.ggml.unknown_token_id u32              = 0
+May 19 14:34:33 dereklin-AB350M-Gaming-3 ollama[10717]: llama_model_loader: - kv  20:            tokenizer.ggml.padding_token_id u32              = 32000
+May 19 14:34:33 dereklin-AB350M-Gaming-3 ollama[10717]: llama_model_loader: - kv  21:               tokenizer.ggml.add_bos_token bool             = true
+May 19 14:34:33 dereklin-AB350M-Gaming-3 ollama[10717]: llama_model_loader: - kv  22:               tokenizer.ggml.add_eos_token bool             = false
+May 19 14:34:33 dereklin-AB350M-Gaming-3 ollama[10717]: llama_model_loader: - kv  23:                    tokenizer.chat_template str              = {{ bos_token }}{% for message in mess...
+May 19 14:34:33 dereklin-AB350M-Gaming-3 ollama[10717]: llama_model_loader: - kv  24:               general.quantization_version u32              = 2
+May 19 14:34:33 dereklin-AB350M-Gaming-3 ollama[10717]: llama_model_loader: - type  f32:   65 tensors
+May 19 14:34:33 dereklin-AB350M-Gaming-3 ollama[10717]: llama_model_loader: - type q4_K:  193 tensors
+May 19 14:34:33 dereklin-AB350M-Gaming-3 ollama[10717]: llama_model_loader: - type q6_K:   33 tensors
+May 19 14:34:33 dereklin-AB350M-Gaming-3 ollama[10717]: llm_load_vocab: special tokens definition check successful ( 323/32064 ).
+May 19 14:34:33 dereklin-AB350M-Gaming-3 ollama[10717]: llm_load_print_meta: format           = GGUF V3 (latest)
+May 19 14:34:33 dereklin-AB350M-Gaming-3 ollama[10717]: llm_load_print_meta: arch             = llama
+May 19 14:34:33 dereklin-AB350M-Gaming-3 ollama[10717]: llm_load_print_meta: vocab type       = SPM
+May 19 14:34:33 dereklin-AB350M-Gaming-3 ollama[10717]: llm_load_print_meta: n_vocab          = 32064
+May 19 14:34:33 dereklin-AB350M-Gaming-3 ollama[10717]: llm_load_print_meta: n_merges         = 0
+May 19 14:34:33 dereklin-AB350M-Gaming-3 ollama[10717]: llm_load_print_meta: n_ctx_train      = 4096
+May 19 14:34:33 dereklin-AB350M-Gaming-3 ollama[10717]: llm_load_print_meta: n_embd           = 3072
+May 19 14:34:33 dereklin-AB350M-Gaming-3 ollama[10717]: llm_load_print_meta: n_head           = 32
+May 19 14:34:33 dereklin-AB350M-Gaming-3 ollama[10717]: llm_load_print_meta: n_head_kv        = 32
+May 19 14:34:33 dereklin-AB350M-Gaming-3 ollama[10717]: llm_load_print_meta: n_layer          = 32
+May 19 14:34:33 dereklin-AB350M-Gaming-3 ollama[10717]: llm_load_print_meta: n_rot            = 96
+May 19 14:34:33 dereklin-AB350M-Gaming-3 ollama[10717]: llm_load_print_meta: n_embd_head_k    = 96
+May 19 14:34:33 dereklin-AB350M-Gaming-3 ollama[10717]: llm_load_print_meta: n_embd_head_v    = 96
+May 19 14:34:33 dereklin-AB350M-Gaming-3 ollama[10717]: llm_load_print_meta: n_gqa            = 1
+May 19 14:34:33 dereklin-AB350M-Gaming-3 ollama[10717]: llm_load_print_meta: n_embd_k_gqa     = 3072
+May 19 14:34:33 dereklin-AB350M-Gaming-3 ollama[10717]: llm_load_print_meta: n_embd_v_gqa     = 3072
+May 19 14:34:33 dereklin-AB350M-Gaming-3 ollama[10717]: llm_load_print_meta: f_norm_eps       = 0.0e+00
+May 19 14:34:33 dereklin-AB350M-Gaming-3 ollama[10717]: llm_load_print_meta: f_norm_rms_eps   = 1.0e-05
+May 19 14:34:33 dereklin-AB350M-Gaming-3 ollama[10717]: llm_load_print_meta: f_clamp_kqv      = 0.0e+00
+May 19 14:34:33 dereklin-AB350M-Gaming-3 ollama[10717]: llm_load_print_meta: f_max_alibi_bias = 0.0e+00
+May 19 14:34:33 dereklin-AB350M-Gaming-3 ollama[10717]: llm_load_print_meta: f_logit_scale    = 0.0e+00
+May 19 14:34:33 dereklin-AB350M-Gaming-3 ollama[10717]: llm_load_print_meta: n_ff             = 8192
+May 19 14:34:33 dereklin-AB350M-Gaming-3 ollama[10717]: llm_load_print_meta: n_expert         = 0
+May 19 14:34:33 dereklin-AB350M-Gaming-3 ollama[10717]: llm_load_print_meta: n_expert_used    = 0
+May 19 14:34:33 dereklin-AB350M-Gaming-3 ollama[10717]: llm_load_print_meta: causal attn      = 1
+May 19 14:34:33 dereklin-AB350M-Gaming-3 ollama[10717]: llm_load_print_meta: pooling type     = 0
+May 19 14:34:33 dereklin-AB350M-Gaming-3 ollama[10717]: llm_load_print_meta: rope type        = 0
+May 19 14:34:33 dereklin-AB350M-Gaming-3 ollama[10717]: llm_load_print_meta: rope scaling     = linear
+May 19 14:34:33 dereklin-AB350M-Gaming-3 ollama[10717]: llm_load_print_meta: freq_base_train  = 10000.0
+May 19 14:34:33 dereklin-AB350M-Gaming-3 ollama[10717]: llm_load_print_meta: freq_scale_train = 1
+May 19 14:34:33 dereklin-AB350M-Gaming-3 ollama[10717]: llm_load_print_meta: n_yarn_orig_ctx  = 4096
+May 19 14:34:33 dereklin-AB350M-Gaming-3 ollama[10717]: llm_load_print_meta: rope_finetuned   = unknown
+May 19 14:34:33 dereklin-AB350M-Gaming-3 ollama[10717]: llm_load_print_meta: ssm_d_conv       = 0
+May 19 14:34:33 dereklin-AB350M-Gaming-3 ollama[10717]: llm_load_print_meta: ssm_d_inner      = 0
+May 19 14:34:33 dereklin-AB350M-Gaming-3 ollama[10717]: llm_load_print_meta: ssm_d_state      = 0
+May 19 14:34:33 dereklin-AB350M-Gaming-3 ollama[10717]: llm_load_print_meta: ssm_dt_rank      = 0
+May 19 14:34:33 dereklin-AB350M-Gaming-3 ollama[10717]: llm_load_print_meta: model type       = 7B
+May 19 14:34:33 dereklin-AB350M-Gaming-3 ollama[10717]: llm_load_print_meta: model ftype      = Q4_K - Medium
+May 19 14:34:33 dereklin-AB350M-Gaming-3 ollama[10717]: llm_load_print_meta: model params     = 3.82 B
+May 19 14:34:33 dereklin-AB350M-Gaming-3 ollama[10717]: llm_load_print_meta: model size       = 2.16 GiB (4.85 BPW)
+May 19 14:34:33 dereklin-AB350M-Gaming-3 ollama[10717]: llm_load_print_meta: general.name     = LLaMA v2
+May 19 14:34:33 dereklin-AB350M-Gaming-3 ollama[10717]: llm_load_print_meta: BOS token        = 1 '<s>'
+May 19 14:34:33 dereklin-AB350M-Gaming-3 ollama[10717]: llm_load_print_meta: EOS token        = 32000 '<|endoftext|>'
+May 19 14:34:33 dereklin-AB350M-Gaming-3 ollama[10717]: llm_load_print_meta: UNK token        = 0 '<unk>'
+May 19 14:34:33 dereklin-AB350M-Gaming-3 ollama[10717]: llm_load_print_meta: PAD token        = 32000 '<|endoftext|>'
+May 19 14:34:33 dereklin-AB350M-Gaming-3 ollama[10717]: llm_load_print_meta: LF token         = 13 '<0x0A>'
+May 19 14:34:33 dereklin-AB350M-Gaming-3 ollama[10717]: llm_load_print_meta: EOT token        = 32007 '<|end|>'
+May 19 14:34:33 dereklin-AB350M-Gaming-3 ollama[10717]: ggml_cuda_init: GGML_CUDA_FORCE_MMQ:   yes
+May 19 14:34:33 dereklin-AB350M-Gaming-3 ollama[10717]: ggml_cuda_init: CUDA_USE_TENSOR_CORES: no
+May 19 14:34:33 dereklin-AB350M-Gaming-3 ollama[10717]: ggml_cuda_init: found 1 CUDA devices:
+May 19 14:34:33 dereklin-AB350M-Gaming-3 ollama[10717]:   Device 0: NVIDIA GeForce RTX 4070 Ti SUPER, compute capability 8.9, VMM: yes
+May 19 14:34:33 dereklin-AB350M-Gaming-3 ollama[10717]: llm_load_tensors: ggml ctx size =    0.30 MiB
+May 19 14:34:33 dereklin-AB350M-Gaming-3 ollama[10717]: time=2024-05-19T14:34:33.584+08:00 level=INFO source=server.go:540 msg="waiting for server to become available" status="llm server not responding"
+May 19 14:34:33 dereklin-AB350M-Gaming-3 ollama[10717]: llm_load_tensors: offloading 32 repeating layers to GPU
+May 19 14:34:33 dereklin-AB350M-Gaming-3 ollama[10717]: llm_load_tensors: offloading non-repeating layers to GPU
+May 19 14:34:33 dereklin-AB350M-Gaming-3 ollama[10717]: llm_load_tensors: offloaded 33/33 layers to GPU
+May 19 14:34:33 dereklin-AB350M-Gaming-3 ollama[10717]: llm_load_tensors:        CPU buffer size =    52.84 MiB
+May 19 14:34:33 dereklin-AB350M-Gaming-3 ollama[10717]: llm_load_tensors:      CUDA0 buffer size =  2157.94 MiB
+May 19 14:34:33 dereklin-AB350M-Gaming-3 ollama[10717]: .................................................................................................
+May 19 14:34:33 dereklin-AB350M-Gaming-3 ollama[10717]: time=2024-05-19T14:34:33.949+08:00 level=INFO source=server.go:540 msg="waiting for server to become available" status="llm server loading model"
+May 19 14:34:33 dereklin-AB350M-Gaming-3 ollama[10717]: llama_new_context_with_model: n_ctx      = 2048
+May 19 14:34:33 dereklin-AB350M-Gaming-3 ollama[10717]: llama_new_context_with_model: n_batch    = 512
+May 19 14:34:33 dereklin-AB350M-Gaming-3 ollama[10717]: llama_new_context_with_model: n_ubatch   = 512
+May 19 14:34:33 dereklin-AB350M-Gaming-3 ollama[10717]: llama_new_context_with_model: freq_base  = 10000.0
+May 19 14:34:33 dereklin-AB350M-Gaming-3 ollama[10717]: llama_new_context_with_model: freq_scale = 1
+May 19 14:34:33 dereklin-AB350M-Gaming-3 ollama[10717]: llama_kv_cache_init:      CUDA0 KV buffer size =   768.00 MiB
+May 19 14:34:33 dereklin-AB350M-Gaming-3 ollama[10717]: llama_new_context_with_model: KV self size  =  768.00 MiB, K (f16):  384.00 MiB, V (f16):  384.00 MiB
+May 19 14:34:33 dereklin-AB350M-Gaming-3 ollama[10717]: llama_new_context_with_model:  CUDA_Host  output buffer size =     0.13 MiB
+May 19 14:34:33 dereklin-AB350M-Gaming-3 ollama[10717]: llama_new_context_with_model:      CUDA0 compute buffer size =   156.00 MiB
+May 19 14:34:33 dereklin-AB350M-Gaming-3 ollama[10717]: llama_new_context_with_model:  CUDA_Host compute buffer size =    10.01 MiB
+May 19 14:34:33 dereklin-AB350M-Gaming-3 ollama[10717]: llama_new_context_with_model: graph nodes  = 1030
+May 19 14:34:33 dereklin-AB350M-Gaming-3 ollama[10717]: llama_new_context_with_model: graph splits = 2
+May 19 14:34:34 dereklin-AB350M-Gaming-3 ollama[123803]: INFO [main] model loaded | tid="138075424772096" timestamp=1716100474
+May 19 14:34:34 dereklin-AB350M-Gaming-3 ollama[10717]: time=2024-05-19T14:34:34.953+08:00 level=INFO source=server.go:545 msg="llama runner started in 1.82 seconds"
+May 19 14:34:34 dereklin-AB350M-Gaming-3 ollama[10717]: [GIN] 2024/05/19 - 14:34:34 | 200 |  2.316603385s |       127.0.0.1 | POST     "/api/chat"
+May 19 14:34:39 dereklin-AB350M-Gaming-3 ollama[10717]: [GIN] 2024/05/19 - 14:34:39 | 200 |  209.531459ms |       127.0.0.1 | POST     "/api/chat"
+May 19 14:35:09 dereklin-AB350M-Gaming-3 ollama[10717]: [GIN] 2024/05/19 - 14:35:09 | 200 |  240.593251ms |       127.0.0.1 | POST     "/api/chat"
+May 19 14:35:22 dereklin-AB350M-Gaming-3 ollama[10717]: [GIN] 2024/05/19 - 14:35:22 | 200 |  1.127192258s |       127.0.0.1 | POST     "/api/chat"
+May 19 14:35:28 dereklin-AB350M-Gaming-3 ollama[10717]: [GIN] 2024/05/19 - 14:35:28 | 200 |  1.098875043s |       127.0.0.1 | POST     "/api/chat"
+May 19 18:44:11 dereklin-AB350M-Gaming-3 ollama[10717]: [GIN] 2024/05/19 - 18:44:11 | 200 |      40.687µs |       127.0.0.1 | GET      "/"
+May 19 18:44:12 dereklin-AB350M-Gaming-3 ollama[10717]: [GIN] 2024/05/19 - 18:44:12 | 404 |      12.233µs |       127.0.0.1 | GET      "/favicon.ico"
+May 19 23:05:06 dereklin-AB350M-Gaming-3 systemd[1]: Stopping ollama.service - Ollama Service...
+May 19 23:05:06 dereklin-AB350M-Gaming-3 systemd[1]: ollama.service: Deactivated successfully.
+May 19 23:05:06 dereklin-AB350M-Gaming-3 systemd[1]: Stopped ollama.service - Ollama Service.
+May 19 23:05:06 dereklin-AB350M-Gaming-3 systemd[1]: ollama.service: Consumed 15min 49.664s CPU time, 3.6G memory peak, 0B memory swap peak.
+May 19 23:05:06 dereklin-AB350M-Gaming-3 systemd[1]: Started ollama.service - Ollama Service.
+May 19 23:05:06 dereklin-AB350M-Gaming-3 ollama[151625]: 2024/05/19 23:05:06 routes.go:1008: INFO server config env="map[OLLAMA_DEBUG:false OLLAMA_LLM_LIBRARY: OLLAMA_MAX_LOADED_MODELS:1 OLLAMA_MAX_QUEUE:512 OLLAMA_MAX_VRAM:0 OLLAMA_NOPRUNE:false OLLAMA_NUM_PARALLEL:1 OLLAMA_ORIGINS:[http://localhost https://localhost http://localhost:* https://localhost:* http://127.0.0.1 https://127.0.0.1 http://127.0.0.1:* https://127.0.0.1:* http://0.0.0.0 https://0.0.0.0 http://0.0.0.0:* https://0.0.0.0:*] OLLAMA_RUNNERS_DIR: OLLAMA_TMPDIR:]"
+May 19 23:05:06 dereklin-AB350M-Gaming-3 ollama[151625]: time=2024-05-19T23:05:06.484+08:00 level=INFO source=images.go:704 msg="total blobs: 5"
+May 19 23:05:06 dereklin-AB350M-Gaming-3 ollama[151625]: time=2024-05-19T23:05:06.484+08:00 level=INFO source=images.go:711 msg="total unused blobs removed: 0"
+May 19 23:05:06 dereklin-AB350M-Gaming-3 ollama[151625]: time=2024-05-19T23:05:06.485+08:00 level=INFO source=routes.go:1054 msg="Listening on 127.0.0.1:11434 (version 0.1.38)"
+May 19 23:05:06 dereklin-AB350M-Gaming-3 ollama[151625]: time=2024-05-19T23:05:06.485+08:00 level=INFO source=payload.go:30 msg="extracting embedded files" dir=/tmp/ollama328509794/runners
+May 19 23:05:09 dereklin-AB350M-Gaming-3 ollama[151625]: time=2024-05-19T23:05:09.864+08:00 level=INFO source=payload.go:44 msg="Dynamic LLM libraries [cpu cpu_avx cpu_avx2 cuda_v11 rocm_v60002]"
+May 19 23:05:10 dereklin-AB350M-Gaming-3 ollama[151625]: time=2024-05-19T23:05:10.033+08:00 level=INFO source=types.go:71 msg="inference compute" id=GPU-11fb2d47-c004-0f02-d2d3-563aae62a84e library=cuda compute=8.9 driver=12.4 name="NVIDIA GeForce RTX 4070 Ti SUPER" total="15.7 GiB" available="14.5 GiB"
+May 20 08:06:48 dereklin-AB350M-Gaming-3 systemd[1]: Stopping ollama.service - Ollama Service...
+May 20 08:06:48 dereklin-AB350M-Gaming-3 systemd[1]: ollama.service: Deactivated successfully.
+May 20 08:06:48 dereklin-AB350M-Gaming-3 systemd[1]: Stopped ollama.service - Ollama Service.
+May 20 08:06:48 dereklin-AB350M-Gaming-3 systemd[1]: ollama.service: Consumed 7.618s CPU time.
+-- Boot 6226801a295b44909b20da5a8b624c5a --
+May 20 20:15:20 dereklin-AB350M-Gaming-3 systemd[1]: Started ollama.service - Ollama Service.
+May 20 20:15:21 dereklin-AB350M-Gaming-3 ollama[2046]: 2024/05/20 20:15:21 routes.go:1008: INFO server config env="map[OLLAMA_DEBUG:false OLLAMA_LLM_LIBRARY: OLLAMA_MAX_LOADED_MODELS:1 OLLAMA_MAX_QUEUE:512 OLLAMA_MAX_VRAM:0 OLLAMA_NOPRUNE:false OLLAMA_NUM_PARALLEL:1 OLLAMA_ORIGINS:[http://localhost https://localhost http://localhost:* https://localhost:* http://127.0.0.1 https://127.0.0.1 http://127.0.0.1:* https://127.0.0.1:* http://0.0.0.0 https://0.0.0.0 http://0.0.0.0:* https://0.0.0.0:*] OLLAMA_RUNNERS_DIR: OLLAMA_TMPDIR:]"
+May 20 20:15:21 dereklin-AB350M-Gaming-3 ollama[2046]: time=2024-05-20T20:15:21.016+08:00 level=INFO source=images.go:704 msg="total blobs: 5"
+May 20 20:15:21 dereklin-AB350M-Gaming-3 ollama[2046]: time=2024-05-20T20:15:21.022+08:00 level=INFO source=images.go:711 msg="total unused blobs removed: 0"
+May 20 20:15:21 dereklin-AB350M-Gaming-3 ollama[2046]: time=2024-05-20T20:15:21.022+08:00 level=INFO source=routes.go:1054 msg="Listening on 127.0.0.1:11434 (version 0.1.38)"
+May 20 20:15:21 dereklin-AB350M-Gaming-3 ollama[2046]: time=2024-05-20T20:15:21.023+08:00 level=INFO source=payload.go:30 msg="extracting embedded files" dir=/tmp/ollama2352788622/runners
+May 20 20:15:25 dereklin-AB350M-Gaming-3 ollama[2046]: time=2024-05-20T20:15:25.783+08:00 level=INFO source=payload.go:44 msg="Dynamic LLM libraries [rocm_v60002 cpu cpu_avx cpu_avx2 cuda_v11]"
+May 20 20:15:25 dereklin-AB350M-Gaming-3 ollama[2046]: time=2024-05-20T20:15:25.988+08:00 level=INFO source=types.go:71 msg="inference compute" id=GPU-11fb2d47-c004-0f02-d2d3-563aae62a84e library=cuda compute=8.9 driver=12.4 name="NVIDIA GeForce RTX 4070 Ti SUPER" total="15.7 GiB" available="15.2 GiB"
