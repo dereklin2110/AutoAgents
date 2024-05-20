@@ -190,7 +190,7 @@ class OpenAIGPTAPI(BaseGPTAPI, RateLimiter):
 
 
 
-    async def chat_with_ollama(model, messages):
+    async def chat_with_ollama(self, model, messages):
         url = "http://localhost:11434/api/chat"
         headers = {
             'Content-Type': 'application/json'
