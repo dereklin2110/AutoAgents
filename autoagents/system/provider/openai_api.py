@@ -202,7 +202,15 @@ class OpenAIGPTAPI(BaseGPTAPI, RateLimiter):
 
         async with aiohttp.ClientSession() as session:
             async with session.post(url, json=payload, headers=headers) as response:
-                return await response.json()
+                if response.status == 200:
+                    # Handle application/x-ndjson
+                    content = await response.text()
+                    # Parse each line as JSON
+                    lines = content.splitlines()
+                    results = [json.loads(line) for line in lines]
+                    return results
+                else:
+                    return await response.json()
 
     async def _achat_completion_stream(self, messages: list[dict]) -> str:
         print("aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa")
@@ -228,7 +236,7 @@ class OpenAIGPTAPI(BaseGPTAPI, RateLimiter):
             {"role": "user", "content": "why is the sky blue?"}
         ]
         response = await self.chat_with_ollama(model, aaa)
-
+        print(json.dumps(response, indent=4))
 
         # response = await requests.request("POST", url, headers=headers, data=json.dumps(payload))
         print(response)
