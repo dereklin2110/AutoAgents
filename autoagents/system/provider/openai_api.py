@@ -227,7 +227,7 @@ class OpenAIGPTAPI(BaseGPTAPI, RateLimiter):
         messages = [
             {"role": "user", "content": "why is the sky blue?"}
         ]
-        response = await chat_with_ollama(model, messages)
+        response = await self.chat_with_ollama(model, messages)
 
 
         # response = await requests.request("POST", url, headers=headers, data=json.dumps(payload))
