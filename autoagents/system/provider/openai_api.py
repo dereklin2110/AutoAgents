@@ -214,7 +214,7 @@ class OpenAIGPTAPI(BaseGPTAPI, RateLimiter):
 
     async def _achat_completion_stream(self, messages: list[dict]) -> str:
         print("aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa")
-        print(messages)
+        #print(messages)
 
         # user_content = [item['content'] for item in messages if item['role'] == 'user']
 
@@ -239,7 +239,7 @@ class OpenAIGPTAPI(BaseGPTAPI, RateLimiter):
         #print(json.dumps(response, indent=4))
 
         # response = await requests.request("POST", url, headers=headers, data=json.dumps(payload))
-        #print(response)
+        print(response)
         return response
 
     def _cons_kwargs(self, messages: list[dict]) -> dict:
