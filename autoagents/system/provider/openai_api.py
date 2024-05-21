@@ -210,7 +210,14 @@ class OpenAIGPTAPI(BaseGPTAPI, RateLimiter):
                     # Parse each line as JSON
                     lines = content.splitlines()
                     results = [json.loads(line) for line in lines]
-                    return results
+
+                    if isinstance(results, str):
+                        results = json.loads(data)
+
+                    if isinstance(results, list) and len(data) > 0:
+                        return results[0]['message']['content']
+
+                    # return results
                 else:
                     print("aaaaaaaaaaaa     response.status != 200    aaaaaaaaaaaaaaaaaaa")
                     return await response.json()
