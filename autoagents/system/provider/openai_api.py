@@ -214,8 +214,8 @@ class OpenAIGPTAPI(BaseGPTAPI, RateLimiter):
 
                     if isinstance(results, list) and len(results) > 0:
                         return results[0]['message']['content']
-                    else
-                        return results['message']['content']
+                    else:
+                        return None
 
                     # return results
                 else:
