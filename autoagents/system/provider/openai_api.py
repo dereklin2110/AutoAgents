@@ -211,11 +211,11 @@ class OpenAIGPTAPI(BaseGPTAPI, RateLimiter):
                     lines = content.splitlines()
                     results = [json.loads(line) for line in lines]
 
-                    if isinstance(results, str):
-                        results = json.loads(data)
 
-                    if isinstance(results, list) and len(data) > 0:
+                    if isinstance(results, list) and len(results) > 0:
                         return results[0]['message']['content']
+                    else
+                        return results['message']['content']
 
                     # return results
                 else:
