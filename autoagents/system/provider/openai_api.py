@@ -215,7 +215,7 @@ class OpenAIGPTAPI(BaseGPTAPI, RateLimiter):
 
     async def _achat_completion_stream(self, messages: list[dict]) -> str:
         print("aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa")
-        #print(messages)
+        print(messages)
 
         # user_content = [item['content'] for item in messages if item['role'] == 'user']
 
@@ -236,10 +236,11 @@ class OpenAIGPTAPI(BaseGPTAPI, RateLimiter):
         aaa = [
             {"role": "user", "content": "why is the sky blue?"}
         ]
-        response = await self.chat_with_ollama(model, aaa)
+        response = await self.chat_with_ollama(model, messages)
         #print(json.dumps(response, indent=4))
 
         # response = await requests.request("POST", url, headers=headers, data=json.dumps(payload))
+        print("bbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbb")
         print(response)
         return response
 
