@@ -204,6 +204,7 @@ class OpenAIGPTAPI(BaseGPTAPI, RateLimiter):
         async with aiohttp.ClientSession() as session:
             async with session.post(url, json=payload, headers=headers) as response:
                 if response.status == 200:
+                    print("aaaaaaaaaaaa     response.status == 200    aaaaaaaaaaaaaaaaaaa")
                     # Handle application/x-ndjson
                     content = await response.text()
                     # Parse each line as JSON
@@ -211,6 +212,7 @@ class OpenAIGPTAPI(BaseGPTAPI, RateLimiter):
                     results = [json.loads(line) for line in lines]
                     return results
                 else:
+                    print("aaaaaaaaaaaa     response.status != 200    aaaaaaaaaaaaaaaaaaa")
                     return await response.json()
 
     async def _achat_completion_stream(self, messages: list[dict]) -> str:
