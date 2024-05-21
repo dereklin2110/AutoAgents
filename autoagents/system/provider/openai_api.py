@@ -197,7 +197,8 @@ class OpenAIGPTAPI(BaseGPTAPI, RateLimiter):
         }
         payload = {
             'model': model,
-            'messages': messages
+            'messages': messages,
+            "stream": False
         }
 
         async with aiohttp.ClientSession() as session:
