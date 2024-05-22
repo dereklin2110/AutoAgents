@@ -100,7 +100,7 @@ langchain==0.0.231
 langchainplus-sdk==0.0.20
 langcodes==3.3.0
 langsmith==0.0.33
-litellm==0.7.5
+litellm==1.37.20
 loguru==0.6.0
 lxml==4.9.2
 Markdown==3.3.7
@@ -120,7 +120,7 @@ nodeenv==1.8.0
 numexpr==2.8.4
 numpy==1.25.2
 oauthlib==3.2.2
-openai==0.27.2
+openai>=1.0.0
 openapi-python-client==0.13.4
 openapi-schema-pydantic==1.2.4
 opencv-python==4.8.0.76
