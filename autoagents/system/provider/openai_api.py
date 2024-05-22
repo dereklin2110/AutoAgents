@@ -270,7 +270,8 @@ class OpenAIGPTAPI(BaseGPTAPI, RateLimiter):
                 "max_tokens": CONFIG.max_tokens_rsp,
                 "n": 1,
                 "stop": self.stops,
-                "temperature": 0.3
+                "temperature": 0.3,
+                "api_base" : "http://localhost:11434"
             }
         return kwargs
 
