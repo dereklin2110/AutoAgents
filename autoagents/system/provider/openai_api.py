@@ -166,92 +166,92 @@ class OpenAIGPTAPI(BaseGPTAPI, RateLimiter):
             litellm.api_version = config.openai_api_version
         self.rpm = int(config.get("RPM", 10))
 
-    # async def _achat_completion_stream(self, messages: list[dict]) -> str:
-    #     response = await litellm.acompletion(
-    #         **self._cons_kwargs(messages),
-    #         stream=True
-    #     )
-
-    #     # create variables to collect the stream of chunks
-    #     collected_chunks = []
-    #     collected_messages = []
-    #     # iterate through the stream of events
-    #     async for chunk in response:
-    #         collected_chunks.append(chunk)  # save the event response
-    #         chunk_message = chunk['choices'][0]['delta']  # extract the message
-    #         collected_messages.append(chunk_message)  # save the message
-    #         if "content" in chunk_message:
-    #             print(chunk_message["content"], end="")
-
-    #     full_reply_content = ''.join([m.get('content', '') for m in collected_messages])
-    #     usage = self._calc_usage(messages, full_reply_content)
-    #     self._update_costs(usage)
-    #     return full_reply_content
-
-
-
-    async def chat_with_ollama(self, model, messages):
-        url = "http://localhost:11434/api/chat"
-        headers = {
-            'Content-Type': 'application/json'
-        }
-        payload = {
-            'model': model,
-            'messages': messages,
-            "stream": False
-        }
-
-        async with aiohttp.ClientSession() as session:
-            async with session.post(url, json=payload, headers=headers) as response:
-                if response.status == 200:
-                    print("aaaaaaaaaaaa     response.status == 200    aaaaaaaaaaaaaaaaaaa")
-                    # Handle application/x-ndjson
-                    content = await response.text()
-                    # Parse each line as JSON
-                    lines = content.splitlines()
-                    results = [json.loads(line) for line in lines]
-
-
-                    if isinstance(results, list) and len(results) > 0:
-                        return results[0]['message']['content']
-                    else:
-                        return None
-
-                    # return results
-                else:
-                    print("aaaaaaaaaaaa     response.status != 200    aaaaaaaaaaaaaaaaaaa")
-                    return await response.json()
-
     async def _achat_completion_stream(self, messages: list[dict]) -> str:
-        print("aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa")
-        print(messages)
+        response = await litellm.acompletion(
+            **self._cons_kwargs(messages),
+            stream=True
+        )
 
-        # user_content = [item['content'] for item in messages if item['role'] == 'user']
+        # create variables to collect the stream of chunks
+        collected_chunks = []
+        collected_messages = []
+        # iterate through the stream of events
+        async for chunk in response:
+            collected_chunks.append(chunk)  # save the event response
+            chunk_message = chunk['choices'][0]['delta']  # extract the message
+            collected_messages.append(chunk_message)  # save the message
+            if "content" in chunk_message:
+                print(chunk_message["content"], end="")
 
-        # url = "http://localhost:11434/api/generate"
-        # api = OpenAIGPTAPI(url)
-        # payload = {
-        #     "model": "phi3",
-        #     "prompt": user_content[0],
-        #     "stream": False
-        # }
-
-        # headers = {
-        #     'Content-Type': 'application/json'
-        # }
+        full_reply_content = ''.join([m.get('content', '') for m in collected_messages])
+        usage = self._calc_usage(messages, full_reply_content)
+        self._update_costs(usage)
+        return full_reply_content
 
 
-        model = "phi3"
-        aaa = [
-            {"role": "user", "content": "why is the sky blue?"}
-        ]
-        response = await self.chat_with_ollama(model, messages)
-        #print(json.dumps(response, indent=4))
 
-        # response = await requests.request("POST", url, headers=headers, data=json.dumps(payload))
-        print("bbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbb")
-        print(response)
-        return response
+    # async def chat_with_ollama(self, model, messages):
+    #     url = "http://localhost:11434/api/chat"
+    #     headers = {
+    #         'Content-Type': 'application/json'
+    #     }
+    #     payload = {
+    #         'model': model,
+    #         'messages': messages,
+    #         "stream": False
+    #     }
+
+    #     async with aiohttp.ClientSession() as session:
+    #         async with session.post(url, json=payload, headers=headers) as response:
+    #             if response.status == 200:
+    #                 print("aaaaaaaaaaaa     response.status == 200    aaaaaaaaaaaaaaaaaaa")
+    #                 # Handle application/x-ndjson
+    #                 content = await response.text()
+    #                 # Parse each line as JSON
+    #                 lines = content.splitlines()
+    #                 results = [json.loads(line) for line in lines]
+
+
+    #                 if isinstance(results, list) and len(results) > 0:
+    #                     return results[0]['message']['content']
+    #                 else:
+    #                     return None
+
+    #                 # return results
+    #             else:
+    #                 print("aaaaaaaaaaaa     response.status != 200    aaaaaaaaaaaaaaaaaaa")
+    #                 return await response.json()
+
+    # async def _achat_completion_stream(self, messages: list[dict]) -> str:
+    #     print("aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa")
+    #     print(messages)
+
+    #     # user_content = [item['content'] for item in messages if item['role'] == 'user']
+
+    #     # url = "http://localhost:11434/api/generate"
+    #     # api = OpenAIGPTAPI(url)
+    #     # payload = {
+    #     #     "model": "phi3",
+    #     #     "prompt": user_content[0],
+    #     #     "stream": False
+    #     # }
+
+    #     # headers = {
+    #     #     'Content-Type': 'application/json'
+    #     # }
+
+
+    #     model = "phi3"
+    #     aaa = [
+    #         {"role": "user", "content": "why is the sky blue?"}
+    #     ]
+    #     response = await self.chat_with_ollama(model, messages)
+    #     #print(json.dumps(response, indent=4))
+
+    #     # response = await requests.request("POST", url, headers=headers, data=json.dumps(payload))
+    #     print("bbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbb")
+    #     print(response)
+    #     return response
 
     def _cons_kwargs(self, messages: list[dict]) -> dict:
         if CONFIG.openai_api_type == 'azure':
@@ -265,7 +265,7 @@ class OpenAIGPTAPI(BaseGPTAPI, RateLimiter):
             }
         else:
             kwargs = {
-                "model": self.model,
+                "model": "phi3",
                 "messages": messages,
                 "max_tokens": CONFIG.max_tokens_rsp,
                 "n": 1,
