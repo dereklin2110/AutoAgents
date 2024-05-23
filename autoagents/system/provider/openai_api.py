@@ -172,7 +172,7 @@ class OpenAIGPTAPI(BaseGPTAPI, RateLimiter):
             stream=False
         )
         print("sssssssssssssssssssssssssssssssssssssssssssssssssssssssssssss")
-        print(await response)
+        print( response)
         # create variables to collect the stream of chunks
         # collected_chunks = []
         # collected_messages = []
