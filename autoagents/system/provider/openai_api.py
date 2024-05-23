@@ -169,22 +169,23 @@ class OpenAIGPTAPI(BaseGPTAPI, RateLimiter):
     async def _achat_completion_stream(self, messages: list[dict]) -> str:
         response = await litellm.acompletion(
             **self._cons_kwargs(messages),
-            stream=True
+            stream=False
         )
         print("sssssssssssssssssssssssssssssssssssssssssssssssssssssssssssss")
-        print(response)
+        print(await response)
         # create variables to collect the stream of chunks
-        collected_chunks = []
-        collected_messages = []
-        # iterate through the stream of events
-        async for chunk in response:
-            collected_chunks.append(chunk)  # save the event response
-            chunk_message = chunk['choices'][0]['delta']  # extract the message
-            collected_messages.append(chunk_message)  # save the message
-            if "content" in chunk_message:
-                print(chunk_message["content"], end="")
+        # collected_chunks = []
+        # collected_messages = []
+        # # iterate through the stream of events
+        # async for chunk in response:
+        #     collected_chunks.append(chunk)  # save the event response
+        #     chunk_message = chunk['choices'][0]['delta']  # extract the message
+        #     collected_messages.append(chunk_message)  # save the message
+        #     if "content" in chunk_message:
+        #         print(chunk_message["content"], end="")
 
-        full_reply_content = ''.join([m.get('content', '') for m in collected_messages])
+        # full_reply_content = ''.join([m.get('content', '') for m in collected_messages])
+        full_reply_content = response_1.choices[0].message.content
         usage = self._calc_usage(messages, full_reply_content)
         self._update_costs(usage)
         return full_reply_content
