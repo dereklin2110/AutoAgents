@@ -171,7 +171,8 @@ class OpenAIGPTAPI(BaseGPTAPI, RateLimiter):
             **self._cons_kwargs(messages),
             stream=True
         )
-
+        print("sssssssssssssssssssssssssssssssssssssssssssssssssssssssssssss")
+        print(response)
         # create variables to collect the stream of chunks
         collected_chunks = []
         collected_messages = []
