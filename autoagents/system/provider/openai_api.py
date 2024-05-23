@@ -185,7 +185,7 @@ class OpenAIGPTAPI(BaseGPTAPI, RateLimiter):
         #         print(chunk_message["content"], end="")
 
         # full_reply_content = ''.join([m.get('content', '') for m in collected_messages])
-        full_reply_content = response_1.choices[0].message.content
+        full_reply_content = response.choices[0].message.content
         usage = self._calc_usage(messages, full_reply_content)
         self._update_costs(usage)
         return full_reply_content
