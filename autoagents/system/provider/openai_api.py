@@ -265,7 +265,7 @@ class OpenAIGPTAPI(BaseGPTAPI, RateLimiter):
             }
         else:
             kwargs = {
-                "model": "ollama/phi3",
+                "model": "ollama/llama3",
                 "messages": messages,
                 "max_tokens": CONFIG.max_tokens_rsp,
                 "n": 1,
