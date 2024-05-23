@@ -223,7 +223,7 @@ trio==0.22.0
 trio-websocket==0.10.2
 tweepy==4.14.0
 typer==0.7.0
-typing_extensions==4.7.0
+typing_extensions==4.8.0
 typing-inspect==0.8.0
 uritemplate==4.1.1
 urllib3==1.26.15
